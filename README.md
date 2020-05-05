@@ -11,3 +11,7 @@ You can find all 2DA files https://github.com/findell666/nwn-2da (forked from ku
 - Download https://github.com/jd28/pynwn
 
 - Install pynwn : python3 setup.py install
+
+## How to run
+
+- python3 nwn-3t-items/list_items.py
