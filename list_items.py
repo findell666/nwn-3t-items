@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import sys
 import os
 import io
 
@@ -276,10 +277,12 @@ def getBagItems(item):
     return result
 
 if __name__ == '__main__':
-    pc = PlayerCharacter('amnesia.bic', DirectoryContainer("./"))
-    #get portrait etc
+
+    bicFile = sys.argv[1]
+    pc = PlayerCharacter(bicFile, DirectoryContainer("./"))
+    #TODO get portrait etc
     print("----")
-    #print(pc.get_name_first())
+    #TODO print(pc.get_name_first())
     print("----")    
 
     equips = pc.equips
