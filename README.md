@@ -15,3 +15,7 @@ You can find all 2DA files https://github.com/findell666/nwn-2da (forked from [k
 ## How to run
 
 - `python3 nwn-3t-items/list_items.py pc.bic`
+
+## Online demo
+
+https://threetowns-py.web.app/
