@@ -20,3 +20,5 @@ BASEITEM
 ->I dont know yet how to get the item cost, for the tier status it's ok
 
 -several bic files -> 1 csv file 
+
+-export to xls insteand of csv, so we can use color sorts etc
