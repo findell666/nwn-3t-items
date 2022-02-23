@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import sys
 import os
 import io
@@ -12,64 +10,71 @@ from pynwn.resource import DirectoryContainer
 from pynwn.file.gff import GffInstance
 from pynwn.file.tlk import Tlk
 
-#tiers
+#my items, all items onglets?
+#item sheet, last seen by (autorisation)
+#tiers of items
 #whishlist
+#custom2DA files, select default peristent world.
+#server normal, server EE, bandeau différent
+#auth
+#sauvegarde des persos, et des versions ?
+#correspondance avec les traductions des propriétés ! formatage !
+
+#commencer avec 3T
+#00 mise en base, créer json coté pytohn
+#0 connection, choix normal ou EE, ou serveur ?
+#1 base PC, item, liste de mes items, alimentation de la base globale
 
 dialog = os.path.join("./resources/tlk/", 'dialog.tlk')    
 tlk = Tlk(open(dialog, 'rb'))
 
-ITEMPROPDEF = "./resources/2da/itempropdef.2da"
-
 #chelou ces 3
 #1 - 9, 22, 45, 56 - 59 Enhancement, Attack, AC, ... : ("./resources/2da/iprp_bonuscost.2da", 1, 2)
-#4, 8, 18, 58, 64 Racial_Type : ("./resources/2da/racialtypes.2da", 3, 1)
-#5, 9, 19, 59, 65 Specific_Alignment : ("./resources/2da/iprp_alignment.2da", 1, 2)
+#4, 8, 18, 58, 64 RACIAL_TYPE : ("./resources/2da/racialtypes.2da", 3, 1)
+#5, 9, 19, 59, 65 SPECIFIC_ALIGNMENT : ("./resources/2da/iprp_alignment.2da", 1, 2)
+
+ITEMPROPDEF = "./resources/2da/itempropdef.2da"
+BASEITEMS = "./resources/2da/baseitems.2da"
 
 #TUPLES : File path / Name pos / Label pos
-
 ALLS = ("./resources/2da/iprp_bonuscost.2da", 1, 2)
-
-
 SR_COST = ("./resources/2da/iprp_srcost.2da", 1, 2) # SR
 RES_COST = ("./resources/2da/iprp_resistcost.2da", 1, 2) # DR
 SKILL_COST = ("./resources/2da/iprp_skillcost.2da", 1, 2) # skills cost
- 
 RED_COST = ("./resources/2da/iprp_redcost.2da", 1, 2) #bags
 WEIGHT_COST = ("./resources/2da/iprp_weightcost.2da", 1, 2) 
 CHARGE_COST = ("./resources/2da/iprp_chargecost.2da", 1, 2)
 MONST_COST = ("./resources/2da/iprp_monstcost.2da", 1, 2)
 DAMAGE_COST = ("./resources/2da/iprp_damagecost.2da", 1, 2)
-
-Specific_Alignment = ("./resources/2da/iprp_alignment.2da", 1, 2)
-Racial_Type = ("./resources/2da/racialtypes.2da", 3, 1)
-
-AC_Type = ("./resources/2da/iprp_acmodtype.2da", 1, 2)
-Ability = ("./resources/2da/iprp_abilities.2da", 1, 2)
-Alignment_Group = ("./resources/2da/iprp_aligngrp.2da", 1, 2)
-Bonus_Feat = ("./resources/2da/iprp_feats.2da", 1, 2)
-Cast_Spell = ("./resources/2da/iprp_spells.2da", 2, 1)
-Class = ("./resources/2da/classes.2da", 2, 1)
-Damage_Type = ("./resources/2da/iprp_damagetype.2da", 1, 2)
-Extra_Melee_Damage_Type = ("./resources/2da/iprp_combatdam.2da", 1, 2)
-Immunity = ("./resources/2da/iprp_immunity.2da", 1, 2)
+SPECIFIC_ALIGNMENT = ("./resources/2da/iprp_alignment.2da", 1, 2)
+RACIAL_TYPE = ("./resources/2da/racialtypes.2da", 3, 1)
+AC_TYPE = ("./resources/2da/iprp_acmodtype.2da", 1, 2)
+ABILITY = ("./resources/2da/iprp_abilities.2da", 1, 2)
+ALIGNMENT_GROUP = ("./resources/2da/iprp_aligngrp.2da", 1, 2)
+BONUS_FEAT = ("./resources/2da/iprp_feats.2da", 1, 2)
+CAST_SPELL = ("./resources/2da/iprp_spells.2da", 2, 1)
+CLASS = ("./resources/2da/classes.2da", 2, 1)
+DAMAGE_TYPE = ("./resources/2da/iprp_damagetype.2da", 1, 2)
+EXTRA_MELEE_DAMAGE_TYPE = ("./resources/2da/iprp_combatdam.2da", 1, 2)
+IMMUNITY = ("./resources/2da/iprp_immunity.2da", 1, 2)
 IMMU_COST = ("./resources/2da/iprp_immuncost.2da", 1, 2)
-Immunity_Spell_School = ("./resources/2da/spellschools.2da", 3, 1)
-
+IMMUNITY_SPELL_SCHOOL = ("./resources/2da/spellschools.2da", 3, 1)
 ON_HIT_COST = ("./resources/2da/iprp_onhitcost.2da", 1, 2)
 ON_HIT_DUR = ("./resources/2da/iprp_onhitdur.2da", 1, 2)
+ON_HIT = ("./resources/2da/iprp_onhit.2da", 1, 2)
+ON_HIT_CAST_SPELL = ("./resources/2da/iprp_onhitspell.2da", 2, 1)
+ON_MONSTER_HIT = ("./resources/2da/iprp_monsterhit.2da", 1, 2)
+POISON_ON_MONSTER_HIT = ("./resources/2da/poison.2da", 2, 1)
+SAVING_THROW_BONUS = ("./resources/2da/iprp_saveelement.2da", 1, 2)
+SAVING_THROW_BONUS_SPECIFIC = ("./resources/2da/iprp_savingthrow.2da", 1, 2)
+SKILL = ("./resources/2da/skills.2da", 2, 1)
+SPECIAL_WALK = ("./resources/2da/iprp_walk.2da", 1, 2)
+TRAP = ("./resources/2da/iprp_traps.2da", 1, 2)
+UNLIMITED_AMMUNITION = ("./resources/2da/iprp_ammotype.2da", 1, 2)
+VISUAL_EFFECT = ("./resources/2da/iprp_visualfx.2da", 2, 1)
 
-On_Hit = ("./resources/2da/iprp_onhit.2da", 1, 2)
-On_Hit_Cast_Spell = ("./resources/2da/iprp_onhitspell.2da", 2, 1)
-On_Monster_Hit = ("./resources/2da/iprp_monsterhit.2da", 1, 2)
-Poison_On_Monster_Hit = ("./resources/2da/poison.2da", 2, 1)
-Saving_Throw_Bonus = ("./resources/2da/iprp_saveelement.2da", 1, 2)
-Saving_Throw_Bonus_Specific = ("./resources/2da/iprp_savingthrow.2da", 1, 2)
-Skill = ("./resources/2da/skills.2da", 2, 1)
-Special_Walk = ("./resources/2da/iprp_walk.2da", 1, 2)
-Trap = ("./resources/2da/iprp_traps.2da", 1, 2)
-Unlimited_Ammunition = ("./resources/2da/iprp_ammotype.2da", 1, 2)
-Visual_Effect = ("./resources/2da/iprp_visualfx.2da", 2, 1)
-
+def getBaseItemName(baseItem):
+    return getValueFrom2DA(BASEITEMS, 1, 3, baseItem, True)
 
 def getValueFrom2DA(f, pos1, pos2, value, useResRef=True):
     file = open(f)
@@ -91,52 +96,52 @@ def getPropertyName2DAValue(prop):
 #from LETO, I didnt find the info in nwn
 def getSubType2DAFile(prop):
     switcher = {
-        28: Class, #AC_Type,
-        0 : Ability, #, KEEN TOut ça
-        27: Class, #Ability, 
-        2 : Ability,
-        7 : Alignment_Group,
-        17: Alignment_Group,
-        57: Alignment_Group,
-        62: Alignment_Group,
-        12 : Bonus_Feat,
-        15 : Cast_Spell,
-        13 : Class,
-        63 : Class,
-        10 : Damage_Type,        
-        16 : Damage_Type,
-        20 : Damage_Type,
-        23 : Damage_Type,
-        24 : Damage_Type,
-        3 : Extra_Melee_Damage_Type,
-        33 : Extra_Melee_Damage_Type, 
-        34 : Extra_Melee_Damage_Type,
-        37 : Immunity,
-        54 : Immunity_Spell_School,
-        48 : On_Hit,
-        82 : On_Hit_Cast_Spell,
-        72 : On_Monster_Hit,
-        21 : Poison_On_Monster_Hit,
-        4 : Racial_Type,
-        8 : Racial_Type,
-        18 : Racial_Type,
-        58 : Racial_Type,
-        64 : Racial_Type, 
-        40 : Saving_Throw_Bonus,
-        49 : Saving_Throw_Bonus,
-        41 : Saving_Throw_Bonus_Specific,
-        50 : Saving_Throw_Bonus_Specific,
-        29 : Skill, 
-        52 : Skill,
-        79 : Special_Walk,
-        5 : Specific_Alignment,
-        9 : Specific_Alignment,
-        19 : Specific_Alignment,
-        59 : Specific_Alignment,
-        65 : Specific_Alignment ,
-        70 : Trap,
-        61 : Unlimited_Ammunition,
-        83 : Visual_Effect,
+        28: CLASS, #AC_TYPE,
+        0 : ABILITY, #, KEEN TOut ça
+        27: CLASS, #ABILITY, 
+        2 : ABILITY,
+        7 : ALIGNMENT_GROUP,
+        17: ALIGNMENT_GROUP,
+        57: ALIGNMENT_GROUP,
+        62: ALIGNMENT_GROUP,
+        12 : BONUS_FEAT,
+        15 : CAST_SPELL,
+        13 : CLASS,
+        63 : CLASS,
+        10 : DAMAGE_TYPE,        
+        16 : DAMAGE_TYPE,
+        20 : DAMAGE_TYPE,
+        23 : DAMAGE_TYPE,
+        24 : DAMAGE_TYPE,
+        3 : EXTRA_MELEE_DAMAGE_TYPE,
+        33 : EXTRA_MELEE_DAMAGE_TYPE, 
+        34 : EXTRA_MELEE_DAMAGE_TYPE,
+        37 : IMMUNITY,
+        54 : IMMUNITY_SPELL_SCHOOL,
+        48 : ON_HIT,
+        82 : ON_HIT_CAST_SPELL,
+        72 : ON_MONSTER_HIT,
+        21 : POISON_ON_MONSTER_HIT,
+        4 : RACIAL_TYPE,
+        8 : RACIAL_TYPE,
+        18 : RACIAL_TYPE,
+        58 : RACIAL_TYPE,
+        64 : RACIAL_TYPE, 
+        40 : SAVING_THROW_BONUS,
+        49 : SAVING_THROW_BONUS,
+        41 : SAVING_THROW_BONUS_SPECIFIC,
+        50 : SAVING_THROW_BONUS_SPECIFIC,
+        29 : SKILL, 
+        52 : SKILL,
+        79 : SPECIAL_WALK,
+        5 : SPECIFIC_ALIGNMENT,
+        9 : SPECIFIC_ALIGNMENT,
+        19 : SPECIFIC_ALIGNMENT,
+        59 : SPECIFIC_ALIGNMENT,
+        65 : SPECIFIC_ALIGNMENT ,
+        70 : TRAP,
+        61 : UNLIMITED_AMMUNITION,
+        83 : VISUAL_EFFECT,
         #1 - 9, 22, 45, 56 - 59 Enhancement, Attack, AC, ...         
     }
     return switcher.get(prop, None)
@@ -152,7 +157,7 @@ def getCostValue2DAFile(prop, sub):
     if prop == 32:
         return (RED_COST, True)
     # +1 to +12
-    if prop in (0, 1, 6, 51, 40, 41, 67):
+    if prop in (0, 1, 6, 51, 40, 41, 45, 56, 67):
         return (ALLS, True)
     #DR        
     if prop == 23:
@@ -187,8 +192,7 @@ def getParam12DAFile(prop, sub):
 def getParam1Value2DAFile(prop, sub, param):
     #racial group
     if prop == 48 and sub == 21 and param == 5:
-        return (Racial_Type, True)        
-    
+        return (RACIAL_TYPE, True)        
 
 def getSubType2DAResRef(prop, sub):
     Dda = getSubType2DAFile(int(prop))
@@ -229,39 +233,26 @@ def getParam1Value2DAResRef(prop, sub, param1, param1Value):
     return param1Value              
 
 def printItem(item, tlk=None):
-    print("----------------ITEM FOUND--------------------")
-    #essayer de récuper le resref ici quand None pour aller cher la string dans le tlk
+    string = "-----------------------------------------------------------------------------<br />"
+    #essayer de récuper le resref ici quand None pour aller chercher la string dans le tlk
     if None != item.get_name(0) and "None" != item.get_name(0):
-        print("NAME : " + str(item.get_name(0)))
+        string += "NAME : " + str(item.get_name(0)) + "<br />"
     else:
         if None == tlk:
-            print("NAME : " + str(item.get_name()))
+            string += "NAME : " + str(item.get_name()) + "<br />"
         else:
-            print("NAME : " + str(tlk.__getitem__(item.get_name())))
-    #print("DESC : " + str(item.get_description(0)))
-    print("DESC ID : " + str(item.get_description_id(0)))
-    print("DISPLAY NAME : " + str(item.display_name))
-    print("BASEITEM : " + str(item.base_type))    
-    #print("COMMENT : " + str(item.comment))       
-    print("TAG : " + str(item.tag))   
+            string += "NAME : " + str(tlk.__getitem__(item.get_name())) + "<br />"
+    string +="DESC ID : " + str(item.get_description_id(0)) + "<br />"
+    string += "DISPLAY NAME : " + str(item.display_name) + "<br />"
+    string += "BASEITEM : " + str(item.base_type) + "<br />"
+    string +="TAG : " + str(item.tag) + "<br />"
+    return string
 
 def printProperty(prop):
-    print("Property : ")
     propn = prop.gff["PropertyName"]
     sub = prop.gff["Subtype"]
     cost = prop.gff["CostValue"]
-    print("        PropertyName : " + str(propn))
-    print("        Subtype : " + str(sub))
-    print("        CostValue : " + str(cost))
-    print("        Param1 : " + str(prop.gff["Param1"]))
-    print("        Param1Value : " + str(prop.gff["Param1Value"]))
-    print("        UsesPerDay : " + str(prop.gff["UsesPerDay"]))
-    #print("        Useable : " + str(prop.gff["Useable"]))
-    #print("        CustomTag : " + str(prop.gff["CustomTag"]))
-    print("        Prop string : " + str(getPropertyName2DAValue(propn)) + " " + str(getSubType2DAResRef(propn, sub)) + " " + str(getCostValue2DAResRef(propn, sub, cost)))
-    #print("        Param1 : " + str(getParam12DAResRef(propn, sub, prop.gff["Param1"])))  
-    print("        Param1Value : " + str(getParam1Value2DAResRef(propn, sub, prop.gff["Param1"], prop.gff["Param1Value"])))      
-
+    return str(getPropertyName2DAValue(propn)) + " " + str(getSubType2DAResRef(propn, sub)) + " " + str(getCostValue2DAResRef(propn, sub, cost)) + "<br>"
 
 def getBagItems(item):
     result = []
@@ -276,14 +267,12 @@ def getBagItems(item):
 
     return result
 
-if __name__ == '__main__':
-
-    bicFile = sys.argv[1]
-    pc = PlayerCharacter(bicFile, DirectoryContainer("./"))
+def getItems(bicFile):
+    items_str = ""
+    #bicFile = "illir1.bic" #sys.argv[1]
+    pc = PlayerCharacter(bicFile, DirectoryContainer("./tmp/"))
     #TODO get portrait etc
-    print("----")
     #TODO print(pc.get_name_first())
-    print("----")    
 
     equips = pc.equips
     items = pc.items 
@@ -306,13 +295,237 @@ if __name__ == '__main__':
         i=i+1
         item = ItemInstance(equips[z][1], z)
         item = item.gff
-        printItem(item, tlk)
+        items_str += printItem(item, tlk)
         properties = item.properties
         
         for y in range(len(properties)):
             prop = ItemProperty(properties[y], item)
             prop = prop.gff
-            printProperty(prop)   
+            items_str += printProperty(prop)   
             
-    print("TOTAL : " + str(i) + " ITEMS");                 
+    items_str += "TOTAL : " + str(i) + " ITEMS"
+    return items_str
+    
+def getTier(item):
+    if(item.tag[0:2] == "bo" or item.tag[0:2] == "it"):
+        splitted = item.tag.split("_")
+        if(len(splitted) > 2):
+            if(item.tag[0:2] == "bo"):
+                if(splitted[1][0:1] == "0"):
+                    return "B" + splitted[1][1:2]
+                else:                    
+                    return "B" + splitted[1]
+            if(item.tag[0:2] == "it"):
+                if(splitted[1][0:1] == "0"):
+                    return "T" + splitted[1][1:2]
+                else:
+                    return "T" + splitted[1]
+    return ""                    
 
+## here we build a dictionnary of metadata and properties
+def buildCSVItemStats(item, params, tlk=None):
+
+    expand_skills = params["expand_skills"]
+    expand_uses = params["expand_uses"]
+    expand_abilities = params["expand_abilities"]  
+    expand_dr = params["expand_dr"]
+    expand_saves = params["expand_saves"]
+
+    filter_scrolls = params["filter_scrolls"]
+    filter_keys = params["filter_keys"]
+    filter_potions = params["filter_potions"]    
+    filter_trinkets = params["filter_trinkets"]
+    filter_blank_scroll = params["filter_blank_scroll"]
+    filter_gems = params["filter_gems"]
+    filter_bag = params["filter_bag"]
+
+    #filters
+    baseItem = item.base_type
+    if((filter_scrolls and 75 == baseItem) or (filter_keys and 65 == baseItem) or
+    (filter_potions and 49 == baseItem) or (filter_trinkets and 24 == baseItem) or
+    (filter_blank_scroll and 102 == baseItem) or (filter_gems and 77 == baseItem) or
+    (filter_bag and 66 == baseItem)):
+        return None
+
+    stats = {}
+
+    # metadata
+    if None != item.get_name(0) and "None" != item.get_name(0):
+         stats["NAME"] = str(item.get_name(0))
+    else:
+        if None == tlk:
+            stats["NAME"] = str(item.get_name())
+        else:
+            stats["NAME"] = str(tlk.__getitem__(item.get_name()))
+
+    displayName = str(item.display_name)
+    if(None == displayName or 'None' == displayName):
+        displayName = ""
+    descId = str(item.get_description_id(0))
+    if(None == descId or 'None' == descId):
+        descId = ""
+    comment = str(item.comment)
+    if(None == comment or 'None' == comment):
+        comment = ""
+
+
+    stats["BASEITEM"] = getBaseItemName(baseItem)
+    stats["BASEITEM_CODE"] = str(baseItem)
+    stats["TAG"] = str(item.tag)
+    stats["DISPLAY_NAME"] = displayName.replace("\n", " - ").replace(";", " - ")
+    stats["DESC_ID"] = descId.replace("\n", " - ").replace(";", " - ")
+    stats["COMMENT"] = comment.replace("\n", " - ").replace(";", " - ")
+    stats["TIER"] = getTier(item)
+
+    # set the properties
+    properties = item.properties
+
+    for y in range(len(properties)):
+        prop = ItemProperty(properties[y], item)
+        prop = prop.gff
+
+        propn = prop.gff["PropertyName"]
+        sub = prop.gff["Subtype"]
+        cost = prop.gff["CostValue"]
+
+        propNameString = str(getPropertyName2DAValue(propn))
+        propSubTypetring = str(getSubType2DAResRef(propn, sub)) 
+        propValue = str(getCostValue2DAResRef(propn, sub, cost))
+
+        propString = ""
+        if("" == propSubTypetring):
+            propString = propNameString
+        else:
+            propString = propSubTypetring
+
+        if((expand_skills and 52 == propn) or (expand_uses and 15 == propn) or (expand_dr and 23 == propn)):
+            propNameString = propNameString + " " + propSubTypetring
+            propString = ""
+
+        # Ability name in the header, just the value in the column
+        if((expand_abilities and 0 == propn) or (expand_saves and (40 == propn or 49 == propn))):
+            propNameString = propSubTypetring
+            propString = "" 
+
+        # Save throws "Save" + name in the header, just the value in the column
+        if((expand_saves and (40 == propn or 49 == propn))):
+            propNameString = "Save " + propSubTypetring
+            propString = ""             
+
+            
+        indexStr = str(propNameString)
+
+        # define new array for stats[index]
+        if indexStr not in stats.keys():        
+            stats[indexStr] = []
+
+        stats[indexStr].append({propString: propValue})
+
+    return stats
+
+def statToCSVString(stat):
+    statStr = ""
+    if isinstance(stat, list):
+        statsStrs = []
+        for k in range(len(stat)):
+            if isinstance(stat[k], dict):         
+                #normally only one pair by element       
+                for key, value in stat[k].items():
+                    statsStrs.append(key + " " + value)
+
+            else:
+                #we never go here
+                statsStrs.append(stat[k])
+        
+        statStr = ", ".join(statsStrs)
+    else:
+        statStr = stat
+
+    return statStr
+
+# Format the items as CSV
+def exportAsCSV(items, filePath, params):
+
+    expand_skills = params["expand_skills"]
+    expand_uses = params["expand_uses"]
+    expand_abilities = params["expand_abilities"] 
+
+    # the csv separator
+    joinStr  = "; "
+
+    f = open(filePath, 'w')
+
+    #HEADER : the header is a merge of all keys
+    allKeys = []
+    for i in range(len(items)):
+        item = items[i]
+        allKeys.extend(item.keys())
+
+    allKeysUnsorted = set(allKeys)
+
+    #filter out these properties, manually remove them from sortReference aswell
+    filterOutProps = ["TAG", "DESC_ID", "COMMENT"] 
+    diff1 = allKeysUnsorted - set(filterOutProps)
+
+    # list all properties in order here
+    sortReference = ["NAME", "DISPLAY_NAME", "BASEITEM", "BASEITEM_CODE", "TIER", "Enhancement Bonus:", "Haste", "Improved Saving Throws:", "Skill Bonus:", "Armor Bonus:"]
+    if(expand_skills):
+        sortReference.remove("Skill Bonus:")
+
+    diff1 = diff1 - set(sortReference)
+
+    #
+    sortReference.extend(list(diff1))
+    finalSortedList = sortReference    
+
+    f.write(joinStr.join(finalSortedList))
+
+    #ROWS
+    for i in range(len(items)):
+        item = items[i]
+        row = ""
+        currentStats = [] #the list of properties to be displayed per row
+        for j in range(len(finalSortedList)):
+            key = finalSortedList[j]
+            stat = item.get(key, "")
+            # add formatted property to the row
+            currentStats.append(statToCSVString(stat))
+        f.write("\n")
+        f.write(joinStr.join(currentStats))
+        
+    f.close    
+    
+    
+def runExportAsCSV(bicFile, dir, fileName, params):
+    items_str = ""
+    pc = PlayerCharacter(bicFile, DirectoryContainer("./tmp/"))
+
+    equips = pc.equips
+    items = pc.items 
+    equips.extend(items) 
+    bags = [] 
+    #fill the lists 
+    for x in range(len(equips)):
+        item = ItemInstance(equips[x][1], pc)
+        item = item.gff
+        
+        # BAG OF HOLDING SCAN ITEMS        
+        if item.base_type == 66:
+            bags.extend(getBagItems(item))            
+
+    equips.extend(bags)
+    
+    ## Build a list of items and their properties
+    items = []
+    i = 0
+    for rg in range(len(equips)):
+       i = i + 1
+       item = ItemInstance(equips[rg][1], rg)
+       item = item.gff
+       itemObject = buildCSVItemStats(item, params, tlk)
+       if(None != itemObject):
+            items.append(itemObject)
+
+    csvFileName = fileName+".csv"
+    exportAsCSV(items, os.path.join(dir, csvFileName), params)
+    return csvFileName
