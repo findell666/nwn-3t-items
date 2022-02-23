@@ -31,6 +31,6 @@ do all baseitem and add checkall, uncheck all so we can export easly only wanted
 
 -dictionnary
 
--default settings
+-save settings with Web Storage API
 
 -default location
