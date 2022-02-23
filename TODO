@@ -22,3 +22,14 @@ BASEITEM
 -several bic files -> 1 csv file 
 
 -export to xls insteand of csv, so we can use color sorts etc
+
+
+would be nice if the columns were grouped together by their type. like abilies near to each other
+-> yes there is a sort system that I have to improved since i added the expand feature
+
+level
+-> I think I can calculate it from the codex codex code I made
+
+one problem is that items that i wear are in the list
+-> I can make a checkbox for that
+
