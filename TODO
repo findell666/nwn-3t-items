@@ -10,11 +10,7 @@ IDEAS
 66 (bag)
 do all baseitem and add checkall, uncheck all so we can export easly only wanted baseitems
 
--Add the option to expand the skills, abilities and ?
-
--Repair :
-DR
-BASEITEM
+-Repair DReduction
 
 -Add in item cost and level and t10 and t11 status
 ->I dont know yet how to get the item cost, for the tier status it's ok
@@ -24,12 +20,12 @@ BASEITEM
 -export to xls insteand of csv, so we can use color sorts etc
 
 
-would be nice if the columns were grouped together by their type. like abilies near to each other
+-would be nice if the columns were grouped together by their type. like abilies near to each other
 -> yes there is a sort system that I have to improved since i added the expand feature
 
-level
+-level
 -> I think I can calculate it from the codex codex code I made
 
-one problem is that items that i wear are in the list
+-one problem is that items that i wear are in the list
 -> I can make a checkbox for that
 
