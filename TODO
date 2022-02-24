@@ -34,3 +34,5 @@ do all baseitem and add checkall, uncheck all so we can export easly only wanted
 -save settings with Web Storage API
 
 -default location
+
+-col with full proerties rendering (activable by checkbox)
