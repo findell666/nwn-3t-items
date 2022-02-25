@@ -9,15 +9,10 @@ You can find all 2DA files https://github.com/findell666/nwn-2da (forked from [k
 ## How to install
 
 - Download https://github.com/jd28/pynwn
-
 - Install pynwn : `python3 setup.py install`
 
-## How to run
-
-- `python3 nwn-3t-items/list_items.py pc.bic`
-
-## Run as flask webapp
-
+## Run as a local flask webapp
+- `cd src`
 - `python3 app.py`
 
 ## Online demo
