@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Neverwinter';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Neverwinter'), url('/static/font/Neverwinter.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Neverwinter';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Neverwinter'), url('/static/font/Neverwinter Bold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Neverwinter';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Neverwinter'), url('/static/font/Neverwinter Bold Italic.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Neverwinter';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Neverwinter'), url('/static/font/Neverwinter Italic.otf') format('opentype');
+}

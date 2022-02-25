@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link href="{{ url_for('static',filename='images/nwn.ico') }}" type="image/x-icon" rel="icon"/>
+    <link href="{{ url_for('static',filename='images/nwn.ico') }}" type="image/x-icon" rel="NWN 3T">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="{{ url_for('static',filename='style.css') }}" rel="stylesheet" type= "text/css">
+
+    <title>The Three Towns items exporting tool</title>
+    <style>
+
+
+        h1{            
+            font: italic bold 40px "Comic Sans MS",cursive,sans-serif;
+            font-family: 'Neverwinter', sans-serif;
+        }
+        .strong{
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="full-screen flex-center">
+    <header></header>
+    <h1>The Three Towns items exporting tool</h1>
+
+    <h2>CSV export</h2>
+    <p>
+        This will export all the items of your characters to a csv file. <span class="strong">The csv delimitor is ";"</span>.
+    </p>
+    <br/>
+    <form action="/exportToCSV" id="exportToCsv" method="post" enctype="multipart/form-data">
+        <label for="pcfile">Select one or several character files (.bic)</label>
+        <input type="file" id="pcfile" name="pcfile" accept=".bic,.gff" multiple/>
+        <br/>
+        <br/>
+        Expand property : render subtypes on several columns (example for 'Skill bonus' : Craft weapon, Discipline, Concentration,.. will be on separated columns)
+        <br/>
+        <label for="expand_skills">Expand skills</label>        
+        <input type="checkbox" id="expand_skills" value="Y" name="expand_skills"/>
+        <br/>
+        <label for="expand_abilities">Expand abilities</label>
+        <input type="checkbox" id="expand_abilities" value="Y" name="expand_abilities"/>
+        <br/>
+        <label for="expand_dr">Expand Damage Resistance</label>
+        <input type="checkbox" id="expand_dr" value="Y" name="expand_dr"/>
+        <br/>
+        <label for="expand_saves">Expand Saves</label>
+        <input type="checkbox" id="expand_saves" value="Y" name="expand_saves"/>
+        <br/>
+        <br/>
+        Filters : hide items by type
+        <br/>
+        <label for="filter_scrolls">Hide scrolls</label>
+        <input type="checkbox" id="filter_scrolls" value="Y" name="filter_scrolls"/>
+        <br/>
+        <label for="filter_potions">Hide potions</label>
+        <input type="checkbox" id="filter_potions" value="Y" name="filter_potions"/>
+        <br/>
+        <label for="filter_keys">Hide keys</label>
+        <input type="checkbox" id="filter_keys" value="Y" name="filter_keys"/>
+        <br/>
+        <label for="filter_trinkets">Hide trinkets</label>
+        <input type="checkbox" id="filter_trinkets" value="Y" name="filter_trinkets"/>
+        <br/>
+        <label for="filter_blank_scroll">Hide blank scroll</label>
+        <input type="checkbox" id="filter_blank_scroll" value="Y" name="filter_blank_scroll"/>  
+        <br/>
+        <label for="filter_gems">Hide gems</label>
+        <input type="checkbox" id="filter_gems" value="Y" name="filter_gems"/>  
+        <br/>
+        <label for="filter_bag">Hide bag</label>
+        <input type="checkbox" id="filter_bag" value="Y" name="filter_bag"/>                                  
+
+        <br/>
+        <br/>
+        <label for="filter_owner">Hide owner</label>
+        <input type="checkbox" id="filter_owner" value="Y" name="filter_owner"/> 
+
+        <br/>
+        <br/>
+        <label for="group_duplicates">Group duplicates</label>
+        <input type="checkbox" id="group_duplicates" value="Y" name="group_duplicates"/>                                  
+
+        <br/>
+        <br/>
+        <input type="submit" value="Export to CSV"/>
+    </form>
+
+    <br/>
+    <br/>
+    <h2>Raw export</h2>
+    <form action="/test" method="post" enctype="multipart/form-data">
+        <label for="pcfile">Select a character file (.bic)</label>
+        <input type="file" id="pcfile" name="pcfile" accept=".bic,.gff"/>
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>
