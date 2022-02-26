@@ -22,3 +22,7 @@
     font-weight: 400;
     src: local('Neverwinter'), url('/static/font/Neverwinter Italic.otf') format('opentype');
 }
+
+#filterItemsByType{
+    column-count: 4;
+}

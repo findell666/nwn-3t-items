@@ -82,7 +82,7 @@ class ItemWrapper:
         
         baseItem = gffItem.base_type
         self.baseItem = baseLib.getBaseItemName(baseItem)
-        self.baseItemCode = str(baseItem)
+        self.baseItemCode = baseItem
         self.tag = str(gffItem.tag)
         self.displayName = displayName.replace("\n", " - ").replace(";", " - ")
         self.descId = descId.replace("\n", " - ").replace(";", " - ")
@@ -192,7 +192,7 @@ class ItemWrapper:
         keys.remove("propertiesDictionnary")
         keys.remove("gffItem")
         keys.remove("unicityString")
-        keys.remove("baseItemCode")
+        # keys.remove("baseItemCode")
 
         for p in range(len(self.properties)):
             prop = self.properties[p]

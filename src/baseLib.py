@@ -1,3 +1,4 @@
+from email.mime import base
 import sys
 import os
 import io
@@ -75,6 +76,17 @@ VISUAL_EFFECT = ("./resources/2da/iprp_visualfx.2da", 2, 1)
 
 def getBaseItemName(baseItem):
     return getValueFrom2DA(BASEITEMS, 1, 3, baseItem, True)
+
+def getBaseItemList():
+    baseItems = []
+
+    for x in range (0, 112):
+        name = getBaseItemName(x)
+        if("****" == name or "*" == name or "Bad Strref" == name):
+            continue
+        baseItems.append({"code":x , "name" : name})
+     
+    return baseItems
 
 def getValueFrom2DA(f, pos1, pos2, value, useResRef=True):
     file = open(f)
@@ -273,7 +285,7 @@ def getPC(bicFile):
 
 def getGFFItemsFromPC(pc, params):
     exclude_equips = params["exclude_equips"]    
-
+    print(params)
     equips = pc.equips
     if(exclude_equips):
         equips = []

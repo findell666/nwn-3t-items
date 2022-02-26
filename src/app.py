@@ -1,7 +1,9 @@
+from email.mime import base
 from flask import Flask, render_template, request, redirect, send_file
 import os
 import time
 import baseLib
+import utils
 import csvExport
 import string, random
 import pathlib
@@ -27,7 +29,9 @@ def index():
     for f in os.listdir(app.config['UPLOAD_FOLDER']):
         os.remove(os.path.join(app.config['UPLOAD_FOLDER'], f))    
 
-    context = { 'server_time' : format_server_time(), 'pa1': str(pa1), 'pa2': str(pa2)}
+    baseItems = baseLib.getBaseItemList()
+    lenBaseItems = len(baseItems)
+    context = {'baseItems' : baseItems, 'lenBaseItems' : lenBaseItems, 'server_time' : format_server_time(), 'pa1': str(pa1), 'pa2': str(pa2)}
     return render_template('index.html', context=context)
 
 @app.route('/test', methods=['POST'])    
@@ -51,7 +55,7 @@ def exportToCSV():
             return redirect('/')
         files = request.files.getlist('pcfile')
         files = list(files)
-        if files:
+        if len(files) > 0:
 
             params = {}
             #expands
@@ -61,14 +65,10 @@ def exportToCSV():
             params["expand_dr"] = True if None != request.form.get("expand_dr") else False
             params["expand_saves"] = True if None != request.form.get("expand_saves") else False
             #filters
-            params["filter_scrolls"] = True if None != request.form.get("filter_scrolls") else False
-            params["filter_potions"] = True if None != request.form.get("filter_potions") else False
-            params["filter_keys"] = True if None != request.form.get("filter_keys") else False
-            params["filter_trinkets"] = True if None != request.form.get("filter_trinkets") else False
-            params["filter_blank_scroll"] = True if None != request.form.get("filter_blank_scroll") else False
-            params["filter_gems"] = True if None != request.form.get("filter_gems") else False
-            params["filter_bag"] = True if None != request.form.get("filter_bag") else False
             params["filter_owner"] = True if None != request.form.get("filter_owner") else False
+
+            params["filterBaseItems"] = utils.buildBaseItemFilters(request.form)
+
             #excludes
             params["exclude_equips"] = True if None != request.form.get("exclude_equips") else False
 

@@ -3,11 +3,12 @@ import os
 import io
 
 import baseLib
+import utils
 from Wrapper import ItemWrapper
 
 # Format the items as CSV
 def exportAsCSV(items, filePath, params):
-
+    
     group_duplicates = params["group_duplicates"]
     expand_skills = params["expand_skills"]
     expand_uses = params["expand_uses"]
@@ -104,7 +105,7 @@ def exportAsCSV(items, filePath, params):
     
     
 def runExportAsCSV(bicFiles, dir, origFileNames, params):
-
+    ItemWrapper.tagsSeen = {}
     items = []
     for iii in range(len(bicFiles)):
         exclude_equips = params["exclude_equips"]
@@ -118,23 +119,9 @@ def runExportAsCSV(bicFiles, dir, origFileNames, params):
         for rg in range(len(gffItems)):
             i = i + 1
 
-            itemWrapper = ItemWrapper(gffItems[rg], origFileNames[iii], params)            
+            itemWrapper = ItemWrapper(gffItems[rg], origFileNames[iii], params)
 
-            #filter objects
-            filter_scrolls = params["filter_scrolls"]
-            filter_keys = params["filter_keys"]
-            filter_potions = params["filter_potions"]    
-            filter_trinkets = params["filter_trinkets"]
-            filter_blank_scroll = params["filter_blank_scroll"]
-            filter_gems = params["filter_gems"]
-            filter_bag = params["filter_bag"]
-
-            #filters
-            baseItem = itemWrapper.baseItemCode
-            if((filter_scrolls and 75 == baseItem) or (filter_keys and 65 == baseItem) or
-            (filter_potions and 49 == baseItem) or (filter_trinkets and 24 == baseItem) or
-            (filter_blank_scroll and 102 == baseItem) or (filter_gems and 77 == baseItem) or
-            (filter_bag and 66 == baseItem)):
+            if(not utils.isFiltered(itemWrapper, params)):
                 continue
 
             items.append(itemWrapper)
