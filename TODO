@@ -36,3 +36,5 @@ do all baseitem and add checkall, uncheck all so we can export easly only wanted
 -default location
 
 -col with full proerties rendering (activable by checkbox)
+
+-popup filters sorter by baseitem with global checkboxes
