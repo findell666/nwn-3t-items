@@ -1,9 +1,8 @@
-from pynwn.file.gff import Gff, GffInstance, make_gff_locstring_property
-from pynwn.file.gff import make_gff_property
-
-from pynwn.item import RepositoryItem, ItemInstance
+from pynwn.file.gff import Gff, make_gff_property, make_gff_locstring_property
 from pynwn.scripts import *
 from pynwn.vars import *
+
+__all__ = ['Door', 'DoorInstance']
 
 TRANSLATION_TABLE = {
     'tag': ('Tag', "Tag."),
@@ -35,13 +34,12 @@ TRANSLATION_TABLE = {
     'save_fortitude': ('Fort', "Fortitude Saving Throw."),
     'save_reflex': ('Ref', "Reflex Saving Throw."),
     'save_will': ('Will', "Will Saving Throw."),
-    'has_inventory': ('HasInventory', "Has inventory flag."),
-    'body_bag': ('BodyBag', "Body bag."),
-    'static': ('Static', "Static flag."),
-    'type': ('Type', "Type."),
-    'useable': ('Useable', "Useable flag."),
+    'linked_to': ('LinkedTo', "Linked to tag."),
+    'linked_to_flags': ('LinkedToFlags', "Linked to flags."),
+    'load_screen': ('LoadScreenID', "Load screen ID."),
+    'generic_type': ('GenericType_New', "Generic type."),
     'paletted_id': ('PaletteID', "Palette ID."),
-    'comment': ('Comment', "Comment.")
+    'comment': ('Comment', "Comment."),
 }
 
 LOCSTRING_TABLE = {
@@ -50,19 +48,17 @@ LOCSTRING_TABLE = {
 }
 
 
-class Placeable(object):
+class Door(object):
     def __init__(self, resource, instance=False):
         self._scripts = None
         self._vars = None
-        self.is_file = False
-
+        self.container = None
         self.is_instance = instance
         if not instance:
             if isinstance(resource, str):
                 from pynwn import ContentObject
                 co = ContentObject.from_file(resource)
                 self.gff = Gff(co)
-                self.is_file = True
             else:
                 self.container = resource[1]
                 self.gff = Gff(resource[0])
@@ -70,9 +66,7 @@ class Placeable(object):
             self.gff = resource
 
     def stage(self):
-        """ Stage changes to the placeable's GFF structure.
-        """
-        if self.gff.is_loaded():
+        if self.gff.is_loaded() and self.container:
             self.container.add_to_saves(self.gff)
 
     @property
@@ -85,7 +79,7 @@ class Placeable(object):
 
     @property
     def scripts(self):
-        """Scripts.  Responds to script events:
+        """Scripts: Door responds to the following script events:
 
         #. Event.CLOSE
         #. Event.DAMAGED
@@ -100,8 +94,8 @@ class Placeable(object):
         #. Event.UNLOCK
         #. Event.USER_DEFINED
         #. Event.CLICK
-        #. Event.DISTURBED
-        #. Event.USED
+        #. Event.FAIL_TO_OPEN
+
         """
         if self._scripts:
             return self._scripts
@@ -120,85 +114,42 @@ class Placeable(object):
             Event.UNLOCK: 'OnUnlock',
             Event.USER_DEFINED: 'OnUserDefined',
             Event.CLICK: 'OnClick',
-            Event.DISTURBED: 'OnInvDisturbed',
-            Event.USED: 'OnUsed'
+            Event.FAIL_TO_OPEN: 'OnFailToOpen'
         }
 
         self._scripts = NWObjectScripts(self, lbls)
 
         return self._scripts
 
-    @property
-    def items(self):
-        """Invenory items.
 
-        :returns: List of RepositoryItem objects or [] if
-                  the object does not have an inventory.
-        """
-        if self.has_inventory and self.gff.has_field('ItemList'):
-            result = []
-            i = 0
-            for p in self.gff['ItemList']:
-                gff_inst = GffInstance(self.gff, 'ItemList', i)
-                st_inst = RepositoryItem(gff_inst, self)
-                result.append(st_inst)
-                i += 1
-
-            return result
-        else:
-            return []
-
-
-class PlaceableInstance(Placeable):
-    """A placeable instance is one placed in an area in the toolset.
+class DoorInstance(Door):
+    """A door instance is one placed in an area in the toolset.
     As such it's values are derived from its parent GFF structure.
     """
 
-    def __init__(self, gff, orignal):
-        Placeable.__init__(self, gff, True)
+    def __init__(self, gff, parent_obj):
+        Door.__init__(self, gff, True)
         self.is_instance = True
-        self.parent_obj = orignal
+        self.parent_obj = parent_obj
 
     def stage(self):
-        """ Stage changes to the placeable instance's parent GFF structure.
-        """
         self.parent_obj.stage()
 
     @property
-    def items(self):
-        """Inventory items.
-
-        :returns: List of Tupels contiain repository position
-                  and the ItemInstance.
-        """
-
-        result = []
-        i = 0
-        # If the creature doesn't have inventory items they won't
-        # have an 'ItemList' field in their gff structure.
-        try:
-            for p in self.gff['ItemList']:
-                gff_inst = GffInstance(self.gff, 'ItemList', i)
-                st_inst = ItemInstance(gff_inst, self)
-                repo_pos = (p['Repos_PosX'], p['Repos_Posy'])
-                result.append((repo_pos, st_inst))
-                i += 1
-        except KeyError:
-            pass
-
-        return result
-
-    @property
     def position(self):
+        """Position
+
+        :returns: Tuple of x, y, z coordinates.
+        """
         return self.gff['X'], self.gff['Y'], self.gff['Z']
 
 
 for key, val in TRANSLATION_TABLE.items():
-    setattr(Placeable, key, make_gff_property('gff', val))
+    setattr(Door, key, make_gff_property('gff', val))
 
 for key, val in LOCSTRING_TABLE.items():
     getter, setter = make_gff_locstring_property('gff', val)
     setattr(getter, '__doc__', val[1])
     setattr(setter, '__doc__', val[1])
-    setattr(Placeable, 'get_' + key, getter)
-    setattr(Placeable, 'set_' + key, setter)
+    setattr(Door, 'get_' + key, getter)
+    setattr(Door, 'set_' + key, setter)

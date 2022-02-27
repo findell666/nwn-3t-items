@@ -1,0 +1,326 @@
+name; displayName; nb; owner; baseItem; tier;Armor Bonus:; Enhancement Bonus:; Attack Bonus:; Ability Bonus:; Skill Bonus:; Saving Throw:; Damage Resistance:; Decreased AC:; Use:; Immunity:; Keen; Reduced Saving Throws:; Vampiric Regeneration:; Damage Immunity:; baseItemCode; Spell Resistance:; Improved Saving Throws:; Reduced Container Weight:; Decreased Skill Modifier:; Only Useable By:; Damage Reduction:; Weight Reduction:; Improved Evasion; On Hit:; Bonus Feat:; Haste; Bonus Spell Slot:; Damage Bonus:; Regeneration:
+Helm of the Mighty Moose; Amnesia's Helm of the Mighty Moose; 1; amnesia.bic; Helmet; B6; ; ; ; "Strength +3"; "Discipline +9"; ; ; ; ; ; ; ; ; ; ; ; "Fortitude +3"; ; ; ; ; ; ; ; ; ; ; ; "Regeneration: +1"
+Greater Robes of Memory; Amnesia's Greater Robes of Memory; 1; amnesia.bic; Armor; ; "Armor Bonus: +6"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Universal +2"; ; ; ; ; ; ; ; "Combat Casting  Spell Penetration "; ; "Wizard 7 Wizard 8 Wizard 9 Wizard 7 Wizard 8 Wizard 9"; ; 
+True Soles of Sendauntra; ; 1; amnesia.bic; Boots; T10; ; ; ; "Constitution +6"; ; ; "Acid Resist 30 / -"; ; ; "Poison "; ; ; ; ; ; ; "Disease +6"; ; ; ; ; ; ; ; ; ; ; ; 
+Fortified Bracers; ; 1; amnesia.bic; Bracer; B6; ; ; ; "Constitution +1 Strength +2"; "Discipline +3"; ; "Slashing Resist 15 / -"; ; "Flame Weapon (17) 1 Use/Day"; ; ; ; ; ; ; ; "Fire +4"; ; ; ; ; ; ; ; ; ; ; ; 
+Staff of Ages; ; 7; amnesia.bic; Magic Staff; T8; ; ; ; ; "Concentration +12 Discipline +6 Heal +6"; ; ; ; "Epic Spell: Dragon Knight 1 Use/Day"; ; ; ; ; ; ; ; "Universal +2"; ; ; ; ; ; ; ; ; "Haste "; ; ; "Regeneration: +2"
+Empyric Dagger; Twice Forged Empyric Dagger of Power; 1; amnesia.bic; Dagger; ; ; "Enhancement Bonus: +8"; ; "Constitution +1 Intelligence +3"; "Concentration +5"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Wizard 5 Wizard 6 Wizard 7 Wizard 4 Wizard 6 Wizard 8"; ; 
+Cloak; <c–ú>Helcondisko Cloak</c>; 1; amnesia.bic; Cloak; ; ; ; ; "Constitution +3"; "Discipline +5"; ; "Piercing Resist 15 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Regeneration: +2"
+True Ring of the Wizard; ; 1; amnesia.bic; Ring; T11; ; ; ; "Intelligence +6"; "Concentration +15"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Wizard "; ; ; ; ; ; ; "Wizard 8 Wizard 9 Wizard 6 Wizard 7 Wizard 8 Wizard 9"; ; "Regeneration: +2"
+True Ring of the Wizard; Amnesia's True Ring of the Wizard; 1; amnesia.bic; Ring; T11; ; ; ; "Intelligence +6"; "Concentration +15"; ; "Electrical Resist 10 / -"; ; ; ; ; ; ; ; ; ; ; ; ; "Wizard "; ; ; ; ; ; ; "Wizard 8 Wizard 9 Wizard 6 Wizard 7 Wizard 8 Wizard 9"; ; "Regeneration: +2"
+Amulet of Wizardry; Amnesia's Amulet of Wizardry; 1; amnesia.bic; Amulet; ; ; ; ; "Constitution +2"; "Concentration +5 Lore +5"; ; ; ; "Light (1) Unlimited Uses/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Wizard 7 Wizard 8 Wizard 9"; ; 
+Belt; <cúú>Erzotortlumjo Belt</c>; 1; amnesia.bic; Belt; ; ; ; ; ; "Spot +5 Persuade +4"; ; "Electrical Resist 20 / - Negative Energy Resist 15 / - Bludgeoning Resist 20 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Personal shop manager; ; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Unique Power Unlimited Uses/Day Unique Power Self Only Unlimited Uses/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Staff of Ages; ; 7; amnesia.bic; Magic Staff; T8; ; ; ; ; "Concentration +12 Discipline +6 Heal +6"; ; ; ; "Epic Spell: Dragon Knight 1 Use/Day"; ; ; ; ; ; ; ; "Universal +2"; ; ; ; ; ; ; ; ; "Haste "; ; ; "Regeneration: +2"
+Breeding Chamber Key; ; 2; amnesia.bic; Key; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúÈ>Flawless Might Crystal <cÈÈÈ>max +7 mighty</c>; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Breeding Chamber Key; ; 2; amnesia.bic; Key; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Natures Stone; ; 1; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Dralenoff Dragon Scale; ; 1; amnesia.bic; Miscellaneous Thin; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Sendauntra Reward Chest Key; ; 1; amnesia.bic; Key; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Cowl of Warding; ; 1; amnesia.bic; Helmet; T4; ; ; ; ; ; ; ; ; "Freedom of Movement (7) 1 Charge/Use Lesser Mind Blank (9) 5 Charges/Use"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Staff of Ages; ; 7; amnesia.bic; Magic Staff; T8; ; ; ; ; "Concentration +12 Discipline +6 Heal +6"; ; ; ; "Epic Spell: Dragon Knight 1 Use/Day"; ; ; ; ; ; ; ; "Universal +2"; ; ; ; ; ; ; ; ; "Haste "; ; ; "Regeneration: +2"
+Ring; <c–Èú>Vex Ring</c>; 1; amnesia.bic; Ring; ; ; ; ; ; ; ; "Sonic Resist 10 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Deathstone; ; 13; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Epic Spell: Greater Ruin Single Use"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Shroud of The Protector; ; 1; amnesia.bic; Cloak; T9; ; ; ; "Constitution +2"; "Discipline +1 Spellcraft +1"; ; "Piercing Resist 15 / -"; ; ; ; ; ; ; ; ; ; "Reflex +1"; ; ; "Chaotic "; ; ; ; ; ; ; ; ; "Regeneration: +1"
+Forge Enchanting Stone; <c–ú>Speedstone <cÈÈÈ>adds haste</c>; 4; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Bash Rock <cÈÈÈ>max +9 bludgeoning damage</c>; 2; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Shockstone <cÈÈÈ>max +2d10 electric damage</c>; 2; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Icestone <cÈÈÈ>max +2d10 cold damage</c>; 6; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Deathstone; ; 13; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Epic Spell: Greater Ruin Single Use"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Drale Summoning Disk; ; 9; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Vilestone <cÈÈÈ>max +2d10 acid damage</c>; 3; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Character Saver; ; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Unique Power Self Only Unlimited Uses/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Drale Summoning Disk; ; 9; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Bash Rock <cÈÈÈ>max +9 bludgeoning damage</c>; 2; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúÈ>Flawless Strength Crystal <cÈÈÈ>max +3 strength</c>; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cú¯–>Legendary Savestone <cÈÈÈ>saves +3 max</c>; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Deathstone; ; 13; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Epic Spell: Greater Ruin Single Use"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Might Crystal <cÈÈÈ>max +10 mighty</c>; 3; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Focus Stone; ; 3; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Icestone <cÈÈÈ>max +2d10 cold damage</c>; 6; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Shockstone <cÈÈÈ>max +2d10 electric damage</c>; 2; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Deathstone; ; 13; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Epic Spell: Greater Ruin Single Use"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Might Crystal <cÈÈÈ>max +10 mighty</c>; 3; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Darkstone <cÈÈÈ>max +2d8 negative damage</c>; 3; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Thunder Rock; ; 2; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúd–>Greater Att Crystal <cÈÈÈ>max +8 attack bonus</c>; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Channelling Crystal; ; 1; amnesia.bic; Gem; T9; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Repository of Knowledge; ; 2; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Manastone <cÈÈÈ>max +2d8 magical damage</c>; 3; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Thunder Rock; ; 1; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Manastone <cÈÈÈ>max +2d10 magical damage</c>; 5; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Darkstone <cÈÈÈ>max +2d8 negative damage</c>; 3; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Icestone <cÈÈÈ>max +2d8 cold damage</c>; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Greater Magic Bag; ; 5; amnesia.bic; Container; T9; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Reduced Container Weight: Content Weight: -80%"; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <c–ú>Speedstone <cÈÈÈ>adds haste</c>; 4; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Manastone <cÈÈÈ>max +2d10 magical damage</c>; 5; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Diamond Golem Heart; ; 1; amnesia.bic; Miscellaneous Medium; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Ebstone <cÈÈÈ>max +8 enchantment</c>; 6; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Focus Stone; ; 3; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Magic Bag; ; 5; amnesia.bic; Container; T7; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Reduced Container Weight: Content Weight: -60%"; ; ; ; ; ; ; ; ; ; ; 
+Bless Weapon; ; 1; amnesia.bic; Scroll; ; ; ; ; ; ; ; ; ; "Bless Weapon (17) Single Use"; ; ; ; ; ; ; ; ; ; ; "Paladin "; ; ; ; ; ; ; ; ; 
+Rod of Frost; ; 1; amnesia.bic; Magic Rod; T1; ; ; ; ; ; ; ; ; "Ray of Frost (1) Unlimited Uses/Day"; ; ; ; ; ; ; ; ; ; ; "Bard  Sorcerer  Wizard "; ; ; ; ; ; ; ; ; 
+Widget of Mind Clearance; ; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Unique Power Self Only 1 Use/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Magic Bag; ; 5; amnesia.bic; Container; T7; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Reduced Container Weight: Content Weight: -60%"; ; ; ; ; ; ; ; ; ; ; 
+Azath's Neck Scale; ; 1; amnesia.bic; Miscellaneous Thin; B4; ; ; ; ; ; ; ; ; "Dragon Breath, Acid 2 Uses/Day Dragon Breath, Paralysis 2 Uses/Day Dragon Breath, Weaken 2 Uses/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Widget of Cloning; Amnesia's Widget of Cloning; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Flame Twin 2 Uses/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Magic Bag; ; 5; amnesia.bic; Container; T7; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Reduced Container Weight: Content Weight: -60%"; ; ; ; ; ; ; ; ; ; ; 
+Manonera Gate Key; ; 1; amnesia.bic; Key; ; ; ; ; ; ; ; ; ; "Knock (3) 1 Use/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+New Caendryl Crypt Key; ; 1; amnesia.bic; Key; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+A Large Key; ; 1; amnesia.bic; Key; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Vault Key; ; 1; amnesia.bic; Key; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Copy of the Ancient Map; ; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Unique Power Self Only Unlimited Uses/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Widget of Elemental Control ; Amnesia's Widget of Elemental Control ; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Unique Power Self Only Unlimited Uses/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+The Librarians Box.; ; 1; amnesia.bic; Container; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Reduced Container Weight: Content Weight: -40%"; ; ; ; ; ; ; ; ; ; ; 
+Recall Orb; ; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Unique Power Self Only Unlimited Uses/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Scry Glass; ; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Unique Power Self Only Unlimited Uses/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Widget of  Fine Elemental Control ; Amnesia's Widget of  Fine Elemental Control ; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Unique Power Self Only Unlimited Uses/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+City of Stones Sewer Key; ; 1; amnesia.bic; Key; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+The Librarians Box.; Amnesia's The Librarians Box.; 1; amnesia.bic; Container; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Reduced Container Weight: Content Weight: -40%"; ; ; ; ; ; ; ; ; ; ; 
+Greater Magic Bag; ; 5; amnesia.bic; Container; T9; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Reduced Container Weight: Content Weight: -80%"; ; ; ; ; ; ; ; ; ; ; 
+Greater Magic Bag; ; 5; amnesia.bic; Container; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Reduced Container Weight: Content Weight: -80%"; ; ; ; ; ; ; ; ; ; ; 
+Magic Bag; ; 5; amnesia.bic; Container; T7; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Reduced Container Weight: Content Weight: -60%"; ; ; ; ; ; ; ; ; ; ; 
+Greater Magic Bag; ; 5; amnesia.bic; Container; T9; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Reduced Container Weight: Content Weight: -80%"; ; ; ; ; ; ; ; ; ; ; 
+Merchant's Codex; ; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Unique Power Unlimited Uses/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Magic Bag; ; 5; amnesia.bic; Container; T7; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Reduced Container Weight: Content Weight: -60%"; ; ; ; ; ; ; ; ; ; ; 
+Thunder Rock; ; 2; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <c–ú>Speedstone <cÈÈÈ>adds haste</c>; 4; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Rod of Life and Death; ; 4; amnesia.bic; Magic Rod; T9; ; ; ; ; ; ; ; ; "Finger of Death (13) 1 Use/Day Harm (11) 3 Uses/Day Heal (11) 3 Uses/Day Resurrection (13) 1 Use/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Recovered- gem; Exchanged  Knowledge Gem; 1; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Vilestone <cÈÈÈ>max +2d10 acid damage</c>; 3; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Spark Stone; ; 1; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Manastone <cÈÈÈ>max +2d8 magical damage</c>; 3; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Power Crystal <cÈÈÈ>max +4 charisma</c>; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Ebstone <cÈÈÈ>max +8 enchantment</c>; 6; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Focus Stone; ; 3; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Ebstone <cÈÈÈ>max +8 enchantment</c>; 6; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Deathstone; ; 13; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Epic Spell: Greater Ruin Single Use"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Deathstone; ; 13; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Epic Spell: Greater Ruin Single Use"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Ebstone <cÈÈÈ>max +8 enchantment</c>; 6; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Ebstone <cÈÈÈ>max +8 enchantment</c>; 6; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Greater Magic Bag; ; 5; amnesia.bic; Container; T9; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Reduced Container Weight: Content Weight: -80%"; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúÈ>Flawless Zen Crystal <cÈÈÈ>max +3 wisdom</c>; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Preserver Gem; ; 1; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Rod of Life and Death; ; 4; amnesia.bic; Magic Rod; ; ; ; ; ; ; ; ; ; "Finger of Death (13) 1 Use/Day Harm (11) 3 Uses/Day Heal (11) 3 Uses/Day Resurrection (13) 1 Use/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Repository of Knowledge; ; 2; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Flamestone <cÈÈÈ>max +2d8 fire damage</c>; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúÈ>Flawless Darkstone <cÈÈÈ>max +1d10 negative damage</c>; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Vilestone <cÈÈÈ>max +2d10 acid damage</c>; 3; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Ebstone <cÈÈÈ>max +8 enchantment</c>; 6; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Manastone <cÈÈÈ>max +2d10 magical damage</c>; 5; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Darkstone <cÈÈÈ>max +2d10 negative damage</c>; 3; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Manastone <cÈÈÈ>max +2d8 magical damage</c>; 3; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Icestone <cÈÈÈ>max +2d10 cold damage</c>; 6; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Performers Gem; ; 1; amnesia.bic; Gem; T9; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Darkstone <cÈÈÈ>max +2d8 negative damage</c>; 3; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Deathstone; ; 13; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Epic Spell: Greater Ruin Single Use"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Deathstone; ; 13; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Epic Spell: Greater Ruin Single Use"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Drale Summoning Disk; ; 9; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Drale Summoning Disk; ; 9; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Drale Summoning Disk; ; 9; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Drale Summoning Disk; ; 9; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Drale Summoning Disk; ; 9; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Drale Summoning Disk; ; 9; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Drale Summoning Disk; ; 9; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Deathstone; ; 13; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Epic Spell: Greater Ruin Single Use"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cú¯–>Legendary Bash Rock <cÈÈÈ>max +8 bludgeoning damage</c>; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <c–ú>Speedstone <cÈÈÈ>adds haste</c>; 4; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Deathstone; ; 13; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Epic Spell: Greater Ruin Single Use"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Rod of Life and Death; ; 4; amnesia.bic; Magic Rod; T9; ; ; ; ; ; ; ; ; "Finger of Death (13) 1 Use/Day Harm (11) 3 Uses/Day Heal (11) 3 Uses/Day Resurrection (13) 1 Use/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Rod of Life and Death; ; 4; amnesia.bic; Magic Rod; T9; ; ; ; ; ; ; ; ; "Finger of Death (13) 1 Use/Day Harm (11) 3 Uses/Day Heal (11) 3 Uses/Day Resurrection (13) 1 Use/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Spark Stone; ; 1; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Deathstone; ; 13; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Epic Spell: Greater Ruin Single Use"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Rhule Key; ; 6; amnesia.bic; Key; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Rhule Key; ; 6; amnesia.bic; Key; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Rhule Key; ; 6; amnesia.bic; Key; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Rhule Key; ; 6; amnesia.bic; Key; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Drale Horn Tip; ; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Icestone <cÈÈÈ>max +2d10 cold damage</c>; 6; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Boomstone <cÈÈÈ>max +2d8 sonic damage</c>; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúúK>Pure Savestone <cÈÈÈ>saves +4 max</c>; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Deathstone; ; 13; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Epic Spell: Greater Ruin Single Use"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Rhule Key; ; 6; amnesia.bic; Key; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Staff of Ages; ; 7; amnesia.bic; Magic Staff; T8; ; ; ; ; "Concentration +12 Discipline +6 Heal +6"; ; ; ; "Epic Spell: Dragon Knight 1 Use/Day"; ; ; ; ; ; ; ; "Universal +2"; ; ; ; ; ; ; ; ; "Haste "; ; ; "Regeneration: +2"
+Deathstone; ; 13; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; "Epic Spell: Greater Ruin Single Use"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Rhule Key; ; 6; amnesia.bic; Key; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Boots; <cúÈ–>Moconrafzotson Boots +6</c>; 1; amnesia.bic; Boots; ; "Armor Bonus: +6"; ; ; "Constitution +2"; "Spellcraft +5 Spot +4"; ; ; ; ; ; ; ; ; ; ; ; "Poison +5"; ; ; ; "4 2"; ; ; ; ; ; ; ; 
+Trighton Rune Stone; ; 2; amnesia.bic; Grenadelike; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Gem of Caendryll ; ; 7; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Sendaunt Medallion; ; 4; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Sendaunt Medallion; ; 4; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Sendaunt Medallion; ; 4; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Sendaunt Medallion; ; 4; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Mana Crystal; ; 2; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Mana Crystal; ; 2; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Eye Of The Beholder; ; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Gem of Caendryll ; ; 7; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Gem of Caendryll ; ; 7; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Gem of Caendryll ; ; 7; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Gem of Caendryll ; ; 7; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Gem of Caendryll ; ; 7; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Gem of Caendryll ; ; 7; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+The Aiedo Wither-Stick; ; 1; amnesia.bic; Quarterstaff; T11; ; "Enhancement Bonus: +9"; ; "Strength +2"; "Parry +50"; ; ; ; ; ; "Keen "; ; ; ; ; ; ; ; ; ; ; ; ; "Ability Drain 6"; ; ; ; "Bludgeoning 2d8 Electrical 2d8"; 
+Empyric Double Axe; ; 1; amnesia.bic; Double Axe; ; ; "Enhancement Bonus: +8"; ; "Constitution +2"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cÈ–>Godly Icestone <cÈÈÈ>max +2d12 cold damage</c>; 4; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cÈ–>Godly Shockstone <cÈÈÈ>max +2d12 electric damage</c>; 3; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cÈ–>Godly Shockstone <cÈÈÈ>max +2d12 electric damage</c>; 3; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú–>True Might Crystal <cÈÈÈ>max +10 mighty</c>; 3; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Epic Wizards Magefist; ; 1; amnesia.bic; Gauntlet; B6; ; ; ; "Intelligence +2"; "Concentration +12"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Wizard "; ; ; ; ; ; ; "Wizard 7 Wizard 6 Wizard 6 Wizard 6 Wizard 7 Wizard 7 Wizard 8"; ; 
+Boots of Striding +5; ; 2; amnesia.bic; Boots; T9; ; ; ; "Constitution +5"; "Discipline +3"; ; ; ; ; ; ; ; ; ; ; ; "Reflex +1"; ; ; ; ; ; ; ; ; ; ; ; 
+Epic Sorcerer's Magefist; ; 1; amnesia.bic; Gauntlet; B6; ; ; ; "Charisma +2"; "Concentration +12 Discipline +6"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Sorcerer "; ; ; ; ; ; ; "Sorcerer 6 Sorcerer 6 Sorcerer 7 Sorcerer 7 Sorcerer 8 Sorcerer 9"; ; 
+Equilibrist's Clasps; ; 1; amnesia.bic; Gauntlet; T8; ; ; ; "Dexterity +2 Strength +2"; "Concentration +8 Discipline +4"; ; "Piercing Resist 5 / -"; ; "Clairaudience/Clairvoyance (15) 1 Use/Day"; ; ; ; ; ; ; ; "Fear +7 Universal +2"; ; ; ; ; ; ; ; ; ; ; ; 
+Cuffs of Finesse +5; ; 2; amnesia.bic; Bracer; B6; ; ; ; "Dexterity +5"; "Discipline +7"; ; ; ; ; ; ; ; ; ; ; ; "Universal +2"; ; ; ; ; ; ; ; ; ; ; ; 
+Legendary Crafters Gloves; ; 1; amnesia.bic; Gauntlet; T9; ; ; ; "Dexterity +5"; "Craft Weapon +32"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Bracers of the Phasing Strike; ; 1; amnesia.bic; Bracer; B6; "Armor Bonus: +8"; ; ; "Strength +1"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Haste "; ; ; 
+Ancient Dwarven Brawlers Belt; ; 1; amnesia.bic; Belt; B6; ; ; ; "Strength +5"; "Discipline +5"; ; "Bludgeoning Resist 10 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Greater Brawler’s Belt; ; 4; amnesia.bic; Belt; T9; ; ; ; "Constitution +2"; ; ; "Bludgeoning Resist 15 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Regeneration: +2"
+Grasp of the Forest; ; 1; amnesia.bic; Gauntlet; T8; ; ; ; "Strength +1"; "Discipline +15"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Druid  Harper Scout  Ranger "; ; ; ; ; ; ; ; ; 
+Bracers Of Van Yoren ; ; 1; amnesia.bic; Bracer; B6; "Armor Bonus: +8"; ; ; ; "Concentration +1 Spellcraft +5"; ; ; ; "See Invisibility (3) 1 Use/Day"; ; ; ; ; ; ; ; "Fire +4"; ; ; ; ; ; ; ; ; "Haste "; ; ; "Regeneration: +2"
+Staff of Ages; ; 7; amnesia.bic; Magic Staff; T8; ; ; ; ; "Concentration +12 Discipline +6 Heal +6"; ; ; ; "Epic Spell: Dragon Knight 1 Use/Day"; ; ; ; ; ; ; ; "Universal +2"; ; ; ; ; ; ; ; ; "Haste "; ; ; "Regeneration: +2"
+Legendary Gloves of the Ten Dragons; <cÈŒ>Forged Hellfire Gloves of Lightning +11</c>; 1; amnesia.bic; Gauntlet; T11; ; ; "Attack Bonus: +11"; ; "Discipline +5"; ; ; ; ; ; ; ; ; ; ; ; "Universal +3"; ; ; "Monk "; ; ; ; "Daze 6"; ; ; ; "Bludgeoning 11 Electrical 2d12 Fire 2d12"; 
+Boots; <cúú>Joeldtirhidnef Boots</c>; 1; amnesia.bic; Boots; ; ; ; ; ; "Heal +5 Hide +5 Move Silently +8"; ; "Bludgeoning Resist 15 / -"; ; ; ; ; ; ; ; ; ; "Universal +4"; ; ; ; ; ; ; ; ; ; ; ; 
+Dragon Steppers; ; 1; amnesia.bic; Boots; T9; "Armor Bonus: +5"; ; ; "Constitution +1 Dexterity +2"; "Discipline +4"; ; ; ; ; ; ; ; ; ; ; ; "Reflex +1"; ; ; "Monk "; ; ; ; ; ; ; ; ; 
+The King's Staff; ; 2; amnesia.bic; Magic Staff; B6; ; "Enhancement Bonus: +6"; ; "Charisma +2 Constitution +2"; "Concentration +4"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Sorcerer "; ; ; ; ; ; ; "Sorcerer 2 Sorcerer 4 Sorcerer 5 Sorcerer 6 Sorcerer 7 Sorcerer 8"; ; 
+Greater Archer’s Belt; ; 2; amnesia.bic; Belt; T9; ; ; ; "Constitution +2"; ; ; "Piercing Resist 15 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Regeneration: +2"
+Greater Swordsman's Belt; ; 1; amnesia.bic; Belt; T9; ; ; ; "Constitution +2"; ; ; "Slashing Resist 15 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Regeneration: +2"
+Greater Brawler’s Belt; ; 4; amnesia.bic; Belt; T9; ; ; ; "Constitution +2"; ; ; "Bludgeoning Resist 15 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Regeneration: +2"
+Rope of Rhule; ; 1; amnesia.bic; Belt; B6; ; ; ; "Dexterity +3 Strength +3"; ; ; ; ; ; ; ; ; ; ; ; ; "Universal +2"; ; ; ; ; ; ; ; ; ; ; ; "Regeneration: +2"
+Cloak of Greater Sanctuary; ; 2; amnesia.bic; Cloak; T10; ; ; ; ; ; ; ; ; "Etherealness 5 Uses/Day Greater Sanctuary (18) 1 Use/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Cloak of Greater Sanctuary; ; 2; amnesia.bic; Cloak; T9; ; ; ; ; ; ; ; ; "Etherealness 5 Uses/Day Greater Sanctuary (18) 1 Use/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Everseer; ; 1; amnesia.bic; Helmet; T9; ; ; ; ; "Search +15 Spot +15"; ; ; ; "Clairaudience/Clairvoyance (15) 3 Uses/Day See Invisibility (3) 4 Uses/Day True Seeing (9) 1 Use/Day Ultravision (6) 2 Uses/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Alertness "; ; ; ; 
+Aetheric Dagger; ; 1; amnesia.bic; Dagger; T8; ; "Enhancement Bonus: +6"; ; ; ; ; ; ; ; ; "Keen "; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Magical 1d8"; 
+Manonera Dagger; ; 1; amnesia.bic; Dagger; T7; ; "Enhancement Bonus: +6"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Acid 1d6"; 
+Survival Knife; Gladiators Glory; 1; amnesia.bic; Dagger; ; ; ; ; ; "Bluff +50"; ; ; ; "Aura Of Glory (7) 1 Use/Day Clarity (3) 1 Use/Day Greater Restoration (13) 1 Use/Day Mordenkainen's Sword (18) 2 Uses/Day Alcohol, Beer Unlimited Uses/Day Displacement (9) 5 Uses/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Haste 65535"; ; ; 
+Dagger; Superlative Chilly Stilletto; 1; amnesia.bic; Dagger; ; ; ; "Attack Bonus: +9"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Cold 2d10"; 
+Dagger; Superlative Dagger; 1; amnesia.bic; Dagger; ; ; ; "Attack Bonus: +9"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+The Heart of Darkness; ; 4; amnesia.bic; Dagger; B6; ; "Enhancement Bonus: +8"; ; ; "Hide +6 Move Silently +6"; ; ; ; ; ; "Keen "; ; ; ; ; ; ; ; ; "Shadowdancer "; ; ; ; ; ; ; ; "Negative Energy 2d6"; 
+The Heart of Darkness; ; 4; amnesia.bic; Dagger; B6; ; "Enhancement Bonus: +8"; ; ; "Hide +6 Move Silently +6"; ; ; ; ; ; "Keen "; ; ; ; ; ; ; ; ; "Shadowdancer "; ; ; ; ; ; ; ; "Negative Energy 2d6"; 
+The Heart of Darkness; ; 4; amnesia.bic; Dagger; B6; ; "Enhancement Bonus: +8"; ; ; "Hide +6 Move Silently +6"; ; ; ; ; ; "Keen "; ; ; ; ; ; ; ; ; "Shadowdancer "; ; ; ; ; ; ; ; "Negative Energy 2d6"; 
+Empyric Dagger; ; 1; amnesia.bic; Dagger; ; ; "Enhancement Bonus: +8"; ; "Constitution +1"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Empyrean Dagger; ; 1; amnesia.bic; Dagger; ; ; "Enhancement Bonus: +8"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+The Heart of Darkness; ; 4; amnesia.bic; Dagger; B6; ; "Enhancement Bonus: +8"; ; ; "Hide +6 Move Silently +6"; ; ; ; ; ; "Keen "; ; ; ; ; ; ; ; ; "Shadowdancer "; ; ; ; ; ; ; ; "Negative Energy 2d6"; 
+Risk Taker; ; 1; amnesia.bic; Dagger; T10; ; "Enhancement Bonus: +9"; ; ; "Hide +3 Listen +5 Move Silently +3 Spot +5"; ; ; ; ; ; ; "Mind Affecting 5"; ; ; ; ; ; ; ; "Assassin "; ; ; ; ; ; "Haste "; ; ; 
+Hollow Sun Ceremonial Blade; ; 1; amnesia.bic; Dagger; T10; ; ; "Attack Bonus: +9"; ; ; ; ; ; ; ; "Keen "; ; ; ; ; ; ; ; ; ; ; ; ; "Daze 6"; ; ; ; "Acid 1d8 Divine 1d6"; 
+Eternal Watch; ; 1; amnesia.bic; Helmet; T8; ; ; ; ; "Concentration +5 Discipline +7 Listen +10 Search +20 Spot +12"; ; ; ; ; ; ; ; ; ; ; ; "Will +5"; ; ; "Druid  Ranger "; ; ; ; ; ; ; ; ; 
+Staff of Ages; ; 7; amnesia.bic; Magic Staff; T8; ; ; ; ; "Concentration +12 Discipline +6 Heal +6"; ; ; ; "Epic Spell: Dragon Knight 1 Use/Day"; ; ; ; ; ; ; ; "Universal +2"; ; ; ; ; ; ; ; ; "Haste "; ; ; "Regeneration: +2"
+Ring of Powers; ; 2; amnesia.bic; Ring; T9; ; ; ; ; ; ; "Cold Resist 15 / - Electrical Resist 15 / - Fire Resist 15 / - Sonic Resist 5 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Regeneration: +2"
+Ring; <cúú>Loktalwisvexko Ring</c>; 1; amnesia.bic; Ring; ; ; ; ; "Strength +5 Wisdom +2"; "Open Lock +3"; ; "Sonic Resist 25 / - Piercing Resist 5 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Ring; <cúÈ–>Nefdexrisdismindef Ring</c>; 1; amnesia.bic; Ring; ; ; ; ; "Dexterity +3 Charisma +2"; "Discipline +5 Move Silently +5"; ; ; ; ; ; ; ; ; ; ; ; "Mind Affecting +4 Death +4"; ; ; ; ; ; ; ; ; ; ; ; 
+Ring of Clear Thought +4; ; 1; amnesia.bic; Ring; T8; ; ; ; "Intelligence +4"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Legendary Crusader's Ring; ; 2; amnesia.bic; Ring; B6; ; ; ; "Charisma +2 Strength +1"; "Concentration +4 Discipline +4"; ; ; ; ; ; ; ; ; ; ; ; "Fire +6 Universal +2"; ; ; ; ; ; ; ; ; ; ; ; "Regeneration: +2"
+Ring; <c–ú>Lumtalrisdis Ring</c>; 1; amnesia.bic; Ring; ; ; ; ; "Strength +2 Charisma +2"; "Discipline +5"; ; "Negative Energy Resist 25 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Omniscient; ; 1; amnesia.bic; Ring; B5; ; ; ; "Intelligence +3"; "Search +12 Spot +12"; ; ; ; ; ; ; "Mind Affecting 4"; ; ; ; ; ; ; ; ; ; ; ; ; "Alertness "; ; "Wizard 7 Wizard 8 Wizard 9"; ; 
+Ring of the Wizard ; ; 4; amnesia.bic; Ring; B5; ; ; ; "Intelligence +4"; "Concentration +5"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Wizard "; ; ; ; ; ; ; "Wizard 4 Wizard 5 Wizard 6 Wizard 7"; ; "Regeneration: +1"
+Legendary Crusader's Ring; ; 2; amnesia.bic; Ring; T6; ; ; ; "Charisma +2 Strength +1"; "Concentration +4 Discipline +4"; ; ; ; ; ; ; ; ; ; ; ; "Fire +6 Universal +2"; ; ; ; ; ; ; ; ; ; ; ; "Regeneration: +2"
+Mentality; ; 3; amnesia.bic; Ring; T9; ; ; ; "Intelligence +5"; ; ; ; ; ; ; ; ; ; ; ; ; "Universal +2"; ; ; ; ; ; ; ; ; ; ; ; 
+Ring of Resistance +5; ; 1; amnesia.bic; Ring; T9; ; ; ; ; "Discipline +3"; ; ; ; ; ; ; ; ; ; ; ; "Universal +5"; ; ; ; ; ; ; ; ; ; ; ; "Regeneration: +1"
+Epic Ring of Righteousness; ; 1; amnesia.bic; Ring; B6; ; ; ; "Charisma +2 Constitution +1 Wisdom +1"; "Discipline +4"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Paladin 1 Paladin 2 Paladin 3 Paladin 4"; ; 
+Ring of the Wizard ; ; 4; amnesia.bic; Ring; B5; ; ; ; "Intelligence +4"; "Concentration +5"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Wizard "; ; ; ; ; ; ; "Wizard 4 Wizard 5 Wizard 6 Wizard 7"; ; "Regeneration: +1"
+Mentality; ; 3; amnesia.bic; Ring; T9; ; ; ; "Intelligence +5"; ; ; ; ; ; ; ; ; ; ; ; ; "Universal +2"; ; ; ; ; ; ; ; ; ; ; ; 
+Greater Ring of Invisibility; ; 4; amnesia.bic; Ring; T8; ; ; ; ; ; ; ; ; "Improved Invisibility (7) 3 Uses/Day Invisibility (3) 1 Use/Day Invisibility Purge (5) 1 Use/Day Invisibility Sphere (5) 1 Use/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Ring of Powers; ; 2; amnesia.bic; Ring; T9; ; ; ; ; ; ; "Cold Resist 15 / - Electrical Resist 15 / - Fire Resist 15 / - Sonic Resist 15 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Regeneration: +2"
+Ring of Brute Force; ; 1; amnesia.bic; Ring; B6; ; ; ; "Constitution +1 Strength +2"; "Discipline +6"; ; ; ; ; ; ; ; ; ; ; ; "Disease +6"; ; ; ; ; ; ; ; ; ; ; ; "Regeneration: +1"
+Mentality; ; 3; amnesia.bic; Ring; T9; ; ; ; "Intelligence +5"; ; ; ; ; ; ; ; ; ; ; ; ; "Universal +2"; ; ; ; ; ; ; ; ; ; ; ; 
+Ring of Protection +6; ; 1; amnesia.bic; Ring; ; "Armor Bonus: +6"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Grand Warlock Ring; ; 1; amnesia.bic; Ring; T6; ; ; ; "Wisdom +2"; ; ; ; ; ; ; ; ; ; ; ; ; "Death +5"; ; ; ; ; ; ; ; ; ; "Druid 7 Druid 7 Druid 9"; ; "Regeneration: +1"
+Grand Warlock Ring; ; 1; amnesia.bic; Ring; B6; ; ; ; "Intelligence +4"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Wizard 4 Wizard 5 Wizard 7"; ; "Regeneration: +1"
+Ring; <cúÈ–>Elperterlumminer Ring</c>; 1; amnesia.bic; Ring; ; ; ; ; "Intelligence +4"; "Perform +4 Persuade +6"; ; "Cold Resist 30 / - Negative Energy Resist 20 / -"; ; ; ; ; ; ; ; ; ; "Mind Affecting +4"; ; ; ; ; ; ; ; ; ; ; ; 
+Ring; <cúú>Tanelforeldmo Ring</c>; 1; amnesia.bic; Ring; ; ; ; ; "Intelligence +3"; ; ; ; ; ; ; ; ; ; ; ; "Spell Resistance: 20"; "Universal +3"; ; ; ; "2 2"; ; ; ; ; ; ; ; 
+Greater Ring of Invisibility; ; 4; amnesia.bic; Ring; T8; ; ; ; ; ; ; ; ; "Improved Invisibility (7) 3 Uses/Day Invisibility (3) 1 Use/Day Invisibility Purge (5) 1 Use/Day Invisibility Sphere (5) 1 Use/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Ring of Clear Thought +5; ; 2; amnesia.bic; Ring; T9; ; ; ; "Intelligence +5"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Ring of Clear Thought +5; ; 2; amnesia.bic; Ring; T9; ; ; ; "Intelligence +5"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Ring; <cúú>Seellexeldmo Ring</c>; 1; amnesia.bic; Ring; ; ; ; ; "Intelligence +4"; ; ; ; ; ; ; ; ; ; ; ; ; "Universal +3 Disease +5"; ; ; ; "2 3"; ; ; ; ; ; ; ; 
+Ring; <cúÈ–>Zotriscentertan Ring +7</c>; 1; amnesia.bic; Ring; ; "Armor Bonus: +7"; ; ; "Charisma +3"; "Concentration +5 Spot +5"; ; "Cold Resist 20 / -"; ; ; ; ; ; ; ; ; "Spell Resistance: 22"; ; ; ; ; ; ; ; ; ; ; ; ; 
+Ring; <cúÈ–>Eldcenparrafithap Ring</c>; 1; amnesia.bic; Ring; ; ; ; ; ; "Concentration +4 Parry +5 Spellcraft +3 Appraise +5"; ; "Acid Resist 30 / -"; ; ; ; ; ; ; ; ; ; "Universal +5"; ; ; ; ; ; ; ; ; ; ; ; 
+Ring of Elemental Resistance; ; 1; amnesia.bic; Ring; ; ; ; ; ; ; ; "Acid Resist 15 / - Cold Resist 15 / - Electrical Resist 15 / - Fire Resist 15 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Ring; <cúÈ–>Fortimempithtan Ring +6</c>; 1; amnesia.bic; Ring; ; "Armor Bonus: +6"; ; ; ; "Intimidate +2 Animal Empathy +5"; ; "Acid Resist 35 / -"; ; ; ; ; ; ; ; ; "Spell Resistance: 24"; "Fortitude +5"; ; ; ; ; ; ; ; ; ; ; ; 
+Greater Ring of Invisibility; ; 4; amnesia.bic; Ring; T8; ; ; ; ; ; ; ; ; "Improved Invisibility (7) 3 Uses/Day Invisibility (3) 1 Use/Day Invisibility Purge (5) 1 Use/Day Invisibility Sphere (5) 1 Use/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Ring of the Wizard ; ; 4; amnesia.bic; Ring; B5; ; ; ; "Intelligence +4"; "Concentration +5"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Wizard "; ; ; ; ; ; ; "Wizard 4 Wizard 5 Wizard 6 Wizard 7"; ; "Regeneration: +1"
+Ring of the Wizard ; ; 4; amnesia.bic; Ring; B5; ; ; ; "Intelligence +4"; "Concentration +5"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Wizard "; ; ; ; ; ; ; "Wizard 4 Wizard 5 Wizard 6 Wizard 7"; ; "Regeneration: +1"
+Greater Sequencer Rod; ; 1; amnesia.bic; Magic Rod; T9; ; ; ; ; ; ; ; ; "Clear Sequencer Unlimited Uses/Day Sequencer (2 spells) 2 Uses/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Sendauntra Summoning Disk; ; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Sendauntra Portal Device; ; 1; amnesia.bic; Grenadelike; ; ; ; ; ; ; ; ; ; "Unique Power Self Only Single Use"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Boots; <cúú>Jorisdisort Boots +5</c>; 1; amnesia.bic; Boots; ; "Armor Bonus: +5"; ; ; "Charisma +1"; "Discipline +5"; ; "Electrical Resist 20 / - Bludgeoning Resist 15 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Greater Brawler’s Belt; ; 4; amnesia.bic; Belt; T9; ; ; ; "Constitution +2"; ; ; "Bludgeoning Resist 15 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Regeneration: +2"
+True Cloak of the Nymph; ; 1; amnesia.bic; Cloak; T11; ; ; ; "Charisma +7"; "Appraise +5 Perform +12 Persuade +5"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Bard 5 Bard 6 Sorcerer 6 Sorcerer 7"; ; 
+Forge Enchanting Stone; <cÈ–>Godly Vilestone <cÈÈÈ>max +2d12 acid damage</c>; 6; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Cuffs of Finesse +5; ; 2; amnesia.bic; Bracer; B6; ; ; ; "Dexterity +5"; "Discipline +7"; ; ; ; ; ; ; ; ; ; ; ; "Universal +2"; ; ; ; ; ; ; ; ; ; ; ; 
+Helm of Extra Absorbtion +7; ; 1; amnesia.bic; Helmet; T9; ; ; ; ; "Concentration +5"; ; "Bludgeoning Resist 5 / -"; ; ; ; ; ; ; ; ; ; ; ; "Listen 4 Search 4 Spot 4"; ; "6 3"; ; ; ; ; ; ; ; 
+Legendary Light Hammer; ; 1; amnesia.bic; Light Hammer; T9; ; "Enhancement Bonus: +8"; ; ; ; ; ; ; ; ; "Keen "; ; ; ; ; ; ; ; ; ; ; ; ; "Sonic "; ; ; ; "Positive Energy 1d12"; 
+Cloak; <cúú>Elweplumjoer Cloak</c>; 1; amnesia.bic; Cloak; ; ; ; ; "Intelligence +3"; "Craft Weapon +6 Persuade +6"; ; "Negative Energy Resist 15 / - Bludgeoning Resist 20 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Masterwork Ironwood Mace; ; 1; amnesia.bic; Dire Mace; T9; ; "Enhancement Bonus: +8"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Weight Reduction: 60% of Weight"; ; "Slay Racial Group DC=26 Wounding DC=26"; ; ; ; ; 
+Helmet; <cúÈ–>Perdextirithmo Helmet +7</c>; 1; amnesia.bic; Helmet; ; "Armor Bonus: +7"; ; ; "Dexterity +1"; "Heal +5 Perform +3"; ; "Acid Resist 20 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; "4 2"; ; ; ; ; ; ; ; 
+Souldrinker; ; 1; amnesia.bic; Bastard Sword; T9; ; "Enhancement Bonus: +7"; ; ; ; ; ; ; ; ; "Keen "; ; "Vampiric Regeneration: +2"; "Negative Energy 25% Immunity Bonus"; ; ; ; ; ; ; ; ; ; "Level Drain DC=14"; ; ; ; "Negative Energy 1d4"; 
+The King's Staff; ; 2; amnesia.bic; Magic Staff; B6; ; "Enhancement Bonus: +6"; ; "Charisma +2 Constitution +2"; "Concentration +4"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Sorcerer "; ; ; ; ; ; ; "Sorcerer 2 Sorcerer 4 Sorcerer 5 Sorcerer 6 Sorcerer 7 Sorcerer 8"; ; 
+Shadow Shield; ; 1; amnesia.bic; Scroll; ; ; ; ; ; ; ; ; ; "Shadow Shield (13) Single Use"; ; ; ; ; ; ; ; ; ; ; "Sorcerer  Wizard "; ; ; ; ; ; ; ; ; 
+Greater Brawler’s Belt; ; 4; amnesia.bic; Belt; T9; ; ; ; "Constitution +2"; ; ; "Bludgeoning Resist 15 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Regeneration: +2"
+Epic Brawler's Belt; ; 1; amnesia.bic; Belt; T10; ; ; ; "Constitution +2"; ; ; "Bludgeoning Resist 20 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Regeneration: +2"
+Legendary Shortsword; ; 1; amnesia.bic; Short Sword; T10; ; "Enhancement Bonus: +8"; ; ; "Tumble +50"; ; ; ; ; ; "Keen "; ; ; ; ; ; ; ; ; ; ; ; ; "Sonic "; ; ; ; "Positive Energy 1d12"; 
+Empyric Rapier; ; 1; amnesia.bic; Rapier; ; ; "Enhancement Bonus: +8"; ; "Constitution +1"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Boots of Striding +5; ; 2; amnesia.bic; Boots; T9; ; ; ; "Constitution +5"; "Discipline +3"; ; ; ; ; ; ; ; ; ; ; ; "Reflex +1"; ; ; ; ; ; ; ; ; ; ; ; 
+Pureblood Druidae Skin; ; 1; amnesia.bic; Armor; T6; "Armor Bonus: +7"; ; ; "Wisdom +3"; "Concentration +6 Discipline +6 Persuade +10"; ; "Acid Resist 10 / -"; ; ; ; ; ; ; ; ; ; ; ; ; "Druid "; ; ; ; ; ; ; "Druid 5 Druid 6 Druid 7 Druid 8 Druid 9"; ; 
+True Strike; ; 1; amnesia.bic; Scroll; ; ; ; ; ; ; ; ; ; "True Strike (5) Single Use"; ; ; ; ; ; ; ; ; ; ; "Bard  Sorcerer  Wizard "; ; ; ; ; ; ; ; ; 
+Bands of Night; ; 1; amnesia.bic; Armor; T9; "Armor Bonus: +7"; ; ; "Constitution +1 Dexterity +2"; "Hide +8 Move Silently +8"; ; ; ; "Shadow Shield (13) 2 Uses/Day"; ; ; ; ; ; ; ; "Universal +2"; ; ; "Shadowdancer "; ; ; ; ; ; ; ; ; 
+Resurrection; ; 1; amnesia.bic; Scroll; ; ; ; ; ; ; ; ; ; "Resurrection (13) Single Use"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Potion of Greater Restoration; ; 2; amnesia.bic; Potion; ; ; ; ; ; ; ; ; ; "Greater Restoration (13) Single Use"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Greater Spell Mantle; ; 1; amnesia.bic; Scroll; ; ; ; ; ; ; ; ; ; "Greater Spell Mantle (17) Single Use"; ; ; ; ; ; ; ; ; ; ; "Bard  Sorcerer  Wizard "; ; ; ; ; ; ; ; ; 
+Bigby's Forceful Hand; ; 1; amnesia.bic; Scroll; ; ; ; ; ; ; ; ; ; "Bigby's Forceful Hand (15) Single Use"; ; ; ; ; ; ; ; ; ; ; "Bard  Sorcerer  Wizard "; ; ; ; ; ; ; ; ; 
+Potion of Greater Restoration; ; 2; amnesia.bic; Potion; ; ; ; ; ; ; ; ; ; "Greater Restoration (13) Single Use"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Mordenkainen's Disjunction; ; 1; amnesia.bic; Scroll; ; ; ; ; ; ; ; ; ; "Mordenkainen's Disjunction (17) Single Use"; ; ; ; ; ; ; ; ; ; ; "Sorcerer  Wizard "; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Boomstone <cÈÈÈ>max +2d10 sonic damage</c>; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cÈ–>Godly Shockstone <cÈÈÈ>max +2d12 electric damage</c>; 3; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Cloak of Displacement; ; 1; amnesia.bic; Cloak; T10; ; ; ; ; ; ; ; ; "Displacement (9) Unlimited Uses/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; "Improved Evasion "; ; ; "Haste "; ; ; 
+Empyric Gloves; ; 1; amnesia.bic; Gauntlet; ; ; ; "Attack Bonus: +10"; "Constitution +2"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Monk "; ; ; ; ; ; ; ; "Bludgeoning 10"; 
+Rhule Rod of Invisibility; ; 1; amnesia.bic; Magic Rod; T8; ; ; ; ; ; ; ; ; "Displacement (9) 1 Use/Day Improved Invisibility (7) 2 Uses/Day Invisibility (3) 4 Uses/Day Invisibility Sphere (5) 3 Uses/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Gloves of the Hin Fist +9; ; 1; amnesia.bic; Gauntlet; T9; ; ; "Attack Bonus: +9"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Monk "; ; ; ; ; ; ; ; "Bludgeoning 9 Sonic 2d10"; 
+Forge Enchanting Stone; <cÈ–>Godly Icestone <cÈÈÈ>max +2d12 cold damage</c>; 4; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cÈ–>Godly Vilestone <cÈÈÈ>max +2d12 acid damage</c>; 6; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cÈ–>Godly Vilestone <cÈÈÈ>max +2d12 acid damage</c>; 6; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cÈ–>Godly Vilestone <cÈÈÈ>max +2d12 acid damage</c>; 6; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Flamestone <cÈÈÈ>max +2d10 fire damage</c>; 2; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Icestone <cÈÈÈ>max +2d10 cold damage</c>; 6; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Flamestone <cÈÈÈ>max +2d10 fire damage</c>; 2; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Darkstone <cÈÈÈ>max +2d10 negative damage</c>; 3; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Darkstone <cÈÈÈ>max +2d10 negative damage</c>; 3; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cÈ–>Godly Vilestone <cÈÈÈ>max +2d12 acid damage</c>; 6; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cÈ–>Godly Manastone <cÈÈÈ>max +2d12 magical damage</c>; 1; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Manastone <cÈÈÈ>max +2d10 magical damage</c>; 5; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cÈ–>Godly Icestone <cÈÈÈ>max +2d12 cold damage</c>; 4; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cÈ–>Godly Vilestone <cÈÈÈ>max +2d12 acid damage</c>; 6; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cÈ–>Godly Icestone <cÈÈÈ>max +2d12 cold damage</c>; 4; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Icestone <cÈÈÈ>max +2d10 cold damage</c>; 6; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Rage; ; 1; amnesia.bic; Helmet; T10; ; ; ; "Constitution +2 Strength +2"; ; ; "Bludgeoning Resist 5 / - Piercing Resist 5 / - Slashing Resist 5 / -"; "Fighter 5"; ; "Fear "; ; ; ; ; ; ; "Death +5"; ; "Parry 50"; "Chaotic "; ; ; ; ; ; ; ; ; "Regeneration: +2"
+Ring; <cúÈ–>Distalwisfortanap Ring</c>; 1; amnesia.bic; Ring; ; ; ; ; "Strength +3 Wisdom +3"; "Discipline +4 Appraise +6"; ; ; ; ; ; ; ; ; ; ; "Spell Resistance: 30"; "Fortitude +8"; ; ; ; ; ; ; ; ; ; ; ; 
+Empyric Katana; ; 1; amnesia.bic; Katana; ; ; "Enhancement Bonus: +8"; ; "Constitution +1"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Feyduster; ; 1; amnesia.bic; Short Sword; T10; ; "Enhancement Bonus: +9"; ; ; ; ; ; ; ; ; "Keen "; ; ; ; ; ; ; ; ; ; ; ; ; "Sleep 6"; ; ; ; ; 
+Dark Night; ; 1; amnesia.bic; Light Crossbow; T9; ; ; "Attack Bonus: +7"; "Intelligence +2"; "Concentration +6 Discipline +3"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Wizard "; ; ; ; ; ; "Haste "; "Wizard 5 Wizard 6 Wizard 7 Wizard 7 Wizard 8 Wizard 9"; ; 
+Ice Rock; ; 1; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Warlocks Gem; ; 1; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Spark Stone; ; 1; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Gods Tear ; ; 3; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Azath's Claw; ; 1; amnesia.bic; Amulet; B6; ; ; ; "Constitution +3"; ; ; ; ; "Ghostly Visage (15) Unlimited Uses/Day"; "Fear "; ; ; ; ; ; ; "Fire +6"; ; ; ; ; ; ; ; ; ; ; ; "Regeneration: +2"
+Helm of the Mighty Moose; ; 1; amnesia.bic; Helmet; B6; ; ; ; "Strength +3"; "Discipline +9"; ; ; ; ; ; ; ; ; ; ; ; "Fortitude +3"; ; ; ; ; ; ; ; ; ; ; ; 
+Gods Tear ; ; 3; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Epic Archer's Belt; ; 1; amnesia.bic; Belt; T10; ; ; ; "Constitution +2"; ; ; "Piercing Resist 20 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Regeneration: +2"
+Trighton Rune Stone; ; 2; amnesia.bic; Grenadelike; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Stag's Belt; ; 1; amnesia.bic; Belt; B6; ; ; ; "Dexterity +3 Strength +2"; "Animal Empathy +6 Discipline +4"; ; ; ; ; ; ; ; ; ; ; ; "Reflex +5"; ; ; ; ; ; ; ; ; ; ; ; 
+Bracers; <cúú>Cenlumsevexko Bracers</c>; 1; amnesia.bic; Bracer; ; ; ; ; ; "Concentration +4"; ; "Negative Energy Resist 20 / - Sonic Resist 20 / - Piercing Resist 15 / -"; ; ; ; ; ; ; ; ; ; "Disease +4"; ; ; ; ; ; ; ; ; ; ; ; 
+Helmet; <cúú>Conwilpersejo Helmet</c>; 1; amnesia.bic; Helmet; ; ; ; ; "Constitution +3"; "Perform +5"; ; "Bludgeoning Resist 15 / -"; ; ; ; ; ; ; ; ; ; "Disease +5"; ; ; ; ; ; ; ; ; ; ; ; 
+Staff of Ages; ; 7; amnesia.bic; Magic Staff; T8; ; ; ; ; "Concentration +12 Discipline +6 Heal +6"; ; ; ; "Epic Spell: Dragon Knight 1 Use/Day"; ; ; ; ; ; ; ; "Universal +2"; ; ; ; ; ; ; ; ; "Haste "; ; ; "Regeneration: +2"
+Elite Gloves of the Militant Orders; ; 1; amnesia.bic; Gauntlet; B6; ; ; ; "Strength +2 Wisdom +2"; "Discipline +6"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Cleric 2 Cleric 3 Cleric 4 Cleric 5 Cleric 6"; ; 
+Legendary Gloves of Healing; ; 1; amnesia.bic; Gauntlet; B6; ; ; ; ; "Heal +25"; ; ; ; "Heal (11) 1 Use/Day Lesser Restoration (3) Unlimited Uses/Day Regenerate (13) 2 Uses/Day Remove Blindness/Deafness (5) 2 Uses/Day Restoration (7) 1 Use/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Helmet; <cúú>Wisrafethso Helmet +4</c>; 1; amnesia.bic; Helmet; ; "Armor Bonus: +4"; ; ; "Wisdom +3"; "Spellcraft +6 Taunt +5"; ; "Slashing Resist 15 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Aramil's Blade; ; 1; amnesia.bic; Longsword; T10; ; "Enhancement Bonus: +8"; ; "Strength +4"; ; ; ; ; "Call Lightning (10) 4 Uses/Day"; ; "Keen "; ; ; ; ; ; ; ; "Move Silently 10 Pick Pocket 10 Tumble 10"; ; ; ; ; ; ; ; ; "Electrical 2d8"; 
+Rod of Decay; ; 1; amnesia.bic; Magic Rod; B3; ; ; ; ; ; ; ; ; "Horrid Wilting (20) 1 Use/Day Negative Energy Ray (9) Unlimited Uses/Day"; ; ; ; ; ; ; ; ; ; ; "Sorcerer  Wizard "; ; ; ; ; ; ; ; ; 
+Forge Enchanting Stone; <cúú>Perfect Manastone <cÈÈÈ>max +2d10 magical damage</c>; 5; amnesia.bic; Miscellaneous Small; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Gods Tear ; ; 3; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Greater Archer’s Belt; ; 2; amnesia.bic; Belt; T9; ; ; ; "Constitution +2"; ; ; "Piercing Resist 15 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Regeneration: +2"
+Superior Swordsman's Belt; ; 1; amnesia.bic; Belt; T8; ; ; ; ; ; ; "Slashing Resist 15 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Belt; <cúú>Vextaljokomin Belt</c>; 1; amnesia.bic; Belt; ; ; ; ; "Strength +5"; ; ; "Sonic Resist 20 / - Bludgeoning Resist 10 / - Piercing Resist 10 / -"; ; ; ; ; ; ; ; ; ; "Mind Affecting +5"; ; ; ; ; ; ; ; ; ; ; ; 
+Belt; <cúú>Terconnefvex Belt of Speed</c>; 1; amnesia.bic; Belt; ; ; ; ; "Constitution +3"; "Move Silently +5"; ; "Cold Resist 20 / - Sonic Resist 15 / -"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; "Haste 65535"; ; ; 
+Power Crystal; ; 1; amnesia.bic; Gem; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Greater Ring of Invisibility; ; 4; amnesia.bic; Ring; T8; ; ; ; ; ; ; ; ; "Improved Invisibility (7) 3 Uses/Day Invisibility (3) 1 Use/Day Invisibility Purge (5) 1 Use/Day Invisibility Sphere (5) 1 Use/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Rod of Wonder; ; 1; amnesia.bic; Magic Rod; T10; ; ; ; ; ; ; ; ; "Flame Twin 1 Use/Day Rod of Wonder 2 Uses/Day Sequencer (3 spells) 1 Use/Day"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Empyric Halberd; ; 1; amnesia.bic; Halberd; ; ; "Enhancement Bonus: +8"; ; "Constitution +2"; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Legendary Scythe; ; 1; amnesia.bic; Scythe; T9; ; "Enhancement Bonus: +9"; ; ; "Parry +50"; ; ; ; ; ; "Keen "; ; ; ; ; ; ; ; ; ; ; ; ; "Sonic "; ; ; ; "Positive Energy 1d12"; 
