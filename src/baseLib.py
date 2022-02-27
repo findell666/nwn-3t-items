@@ -2,6 +2,7 @@ from email.mime import base
 import sys
 import os
 import io
+import numpy as np
 
 from pynwn.player_character import PlayerCharacter
 from pynwn.item import ItemInstance
@@ -74,6 +75,9 @@ TRAP = ("./resources/2da/iprp_traps.2da", 1, 2)
 UNLIMITED_AMMUNITION = ("./resources/2da/iprp_ammotype.2da", 1, 2)
 VISUAL_EFFECT = ("./resources/2da/iprp_visualfx.2da", 2, 1)
 
+# make a 2DA for that ?
+CATEGORIES = ["none", "melee", "ranged", "shield", "armor", "helmet", "ammo", "thrown", "staves", "potion", "scroll", "thieves' tools", "misc",
+"wands", "rods", "traps", "misc unequippable", "container", "??", "healers", "torches"]
 def getBaseItemName(baseItem):
     return getValueFrom2DA(BASEITEMS, 1, 3, baseItem, True)
 
@@ -82,11 +86,31 @@ def getBaseItemList():
 
     for x in range (0, 112):
         name = getBaseItemName(x)
-        if("****" == name or "*" == name or "Bad Strref" == name):
+        category = getValueFrom2DA(BASEITEMS, 27, 27, x, False)
+        # baseCost = getValueFrom2DA(BASEITEMS, 28, 28, x, False)
+        
+        if("****" == name or "*" == name or "Bad Strref" == name 
+        or category == "****" or category == "*"):
+        # or baseCost == "****" or baseCost == "*"):
             continue
-        baseItems.append({"code":x , "name" : name})
-     
+        baseItems.append({"code":x , "name" : name, "category": int(category)})     
     return baseItems
+
+def getBaseItemsCategories():    
+    baseItemsList = getBaseItemList()
+    baseItemsCategories = np.empty(21, dtype=object) 
+    for x in range (len(baseItemsList)):        
+        category = baseItemsList[x].get("category")
+        if(None == baseItemsCategories[category]):
+            baseItemsCategories[category] = []
+        baseItemsCategories[category].append(baseItemsList[x])
+
+    categories = []
+    for x in range (len(baseItemsCategories)):
+        if(None != baseItemsCategories[x]):
+            dic = {"category" : x, "name": CATEGORIES[x], "elts": baseItemsCategories[x], "len": len(baseItemsCategories[x])}
+            categories.append(dic)
+    return categories        
 
 def getValueFrom2DA(f, pos1, pos2, value, useResRef=True):
     file = open(f)

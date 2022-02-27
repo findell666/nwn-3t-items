@@ -30,8 +30,11 @@ def index():
         os.remove(os.path.join(app.config['UPLOAD_FOLDER'], f))    
 
     baseItems = baseLib.getBaseItemList()
+    categories = baseLib.getBaseItemsCategories()
+
     lenBaseItems = len(baseItems)
-    context = {'baseItems' : baseItems, 'lenBaseItems' : lenBaseItems, 'server_time' : format_server_time(), 'pa1': str(pa1), 'pa2': str(pa2)}
+    lenCategories = len(categories)
+    context = {'categories' : categories, 'lenCategories' : lenCategories, 'baseItems' : baseItems, 'lenBaseItems' : lenBaseItems, 'server_time' : format_server_time(), 'pa1': str(pa1), 'pa2': str(pa2)}
     return render_template('index.html', context=context)
 
 @app.route('/test', methods=['POST'])    

@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-
+        crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+
     <link href="{{ url_for('static',filename='images/nwn.ico') }}" type="image/x-icon" rel="icon" />
     <link href="{{ url_for('static',filename='images/nwn.ico') }}" type="image/x-icon" rel="NWN 3T">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
@@ -35,15 +32,64 @@
 
 <body class="full-screen flex-center">
 
-    <div class="container d-flex h-100">
-        <div class="row align-self-center">
-            <h1>The Three Towns items exporting tool</h1>
+    <div class="container-fluid h-100">
+        <div class="row">
+            <div class="col col-md-4 col-auto me-auto">
+            </div>            
+            <div class="col ms-md-auto">
+                <h1>The Three Towns items exporting tool</h1>
+            </div>
+            <div class="col col-auto d-flex">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#configModal">
+                    <i class="bi-gear"></i>
+                </button>                
+                <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Help
+                </button>
+            </div>
         </div>
+        <div class="modal fade" id="configModal" tabindex="-1" aria-labelledby="configModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="configModalLabel">Actions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>The state of the checkboxes is saved, would you like to clear it ? The page will be refreshed.</p>
+                    <button type="button" class="btn btn-danger" onclick="localStorage.clear();window.location.reload();">Clear saved preferences</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div> 
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">How to use this tool</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Choose on or several .bic files. They can be found in your NWN directory\localvault. </p>
+                    <p>When you open the csv with your spreadsheet editor use ";" as delimitor</p>
+                    <p>Check the thing about quotes and strings</p>
+                    <p>excel example</p>
+                    <p>libre office example</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>        
     </div>    
 
     <div class="container-fluid">
 
-        <div class="">        
+        <div class="">
 
             <h2>CSV export</h2>
             <p>
@@ -62,56 +108,67 @@
                 Concentration,.. will be on separated columns)
                 <br />
                 <div class="col-12">
-                    <div class="form-check">                        
+                    <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="expand_skills" value="Y" name="expand_skills">
                         <label class="form-check-label" for="expand_skills">Expand skills</label>
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="form-check">                        
+                    <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="expand_abilities" value="Y" name="expand_abilities">
                         <label class="form-check-label" for="expand_abilities">Expand abilities</label>
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="form-check">                        
+                    <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="expand_dr" value="Y" name="expand_dr">
                         <label class="form-check-label" for="expand_dr">Expand Damage Resistance</label>
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="form-check">                        
+                    <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="expand_saves" value="Y" name="expand_saves">
                         <label class="form-check-label" for="expand_saves">Expand Saving throws</label>
                     </div>
                 </div>
-                <hr/>
+                <br />
                 <div class="col-12">
-                    <div class="form-check">                        
+                    <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="filter_owner" value="Y" name="filter_owner">
                         <label class="form-check-label" for="filter_owner">Hide owner</label>
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="form-check">                        
+                    <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="exclude_equips" value="Y" name="exclude_equips">
                         <label class="form-check-label" for="exclude_equips">Hide equiped items</label>
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="form-check">                        
+                    <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="group_duplicates" value="Y" name="group_duplicates">
                         <label class="form-check-label" for="group_duplicates">Group duplicates</label>
                     </div>
                 </div>
-                <br/>
+                <br />
+                
                 Show/hide items by type <button class="btn btn-sm" id="toggleFilterItemsByType" type="button">OPEN</button>
 
                 <div id="filterItemsByType">
-                    {%for x in range(0, context.lenBaseItems) %}
-                    <br />
-                    <label for="filter_{{context.baseItems[x].code}}">Show {{context.baseItems[x].name}}</label>
-                    <input type="checkbox" checked id="filter_{{context.baseItems[x].code}}" value="Y" name="filter_{{context.baseItems[x].code}}" />
+
+                    {%for category in context.categories %}
+                    <div id="category_{{category.category}}" class="category">
+                        <label for="category_{{category.category}}" class="category-title">{{category.name}}</label>
+                        <input id="category_{{category.category}}" title="Select / deselect all" type="checkbox" onclick="toggleAllBaseItemsCategory(this)" checked value="Y" name="checkall-category_{{category.category}}" />
+                        {%for elt in category.elts %}
+                        <div class="col-12">
+                            <div class="form-check">
+                                <label for="filter_{{elt['code']}}">Show {{elt['name']}}</label>
+                                <input type="checkbox" checked id="filter_{{elt['code']}}" value="Y" name="filter_{{elt['code']}}" />
+                            </div>
+                        </div>
+                        {%endfor%}
+                    </div>
                     {%endfor%}
                 </div>
                 <br />
@@ -129,6 +186,9 @@
             </form> -->
         </div>
     </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>
