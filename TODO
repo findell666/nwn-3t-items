@@ -1,40 +1,25 @@
 IDEAS
 
--Make a interface to filter some baseitem types
-24 (trinkets) 
-49 (potion) 
-65 (keys) 
-75 (scrolls)
-102 (blank scroll)
-77 (gems)
-66 (bag)
-do all baseitem and add checkall, uncheck all so we can export easly only wanted baseitems
+-Make a interface to filter some baseitem types : DONE
 
 -Repair DReduction
 
--Add in item cost and level and t10 and t11 status
-->I dont know yet how to get the item cost, for the tier status it's ok
+-Add in item cost and level
+->I need to implement the cost formula
 
--several bic files -> 1 csv file 
+-Tier : DONE
 
--export to xls insteand of csv, so we can use color sorts etc
+-Several bic files -> 1 csv file : DONE
 
+-export to xls instead of csv, so we can use color sorts etc
 
 -would be nice if the columns were grouped together by their type. like abilies near to each other
 -> yes there is a sort system that I have to improved since i added the expand feature
 
--level
--> I think I can calculate it from the codex codex code I made
+-One problem is that items that i wear are in the list : DONE
 
--one problem is that items that i wear are in the list
--> I can make a checkbox for that
+-Dictionnary to rename the names of properties
 
--dictionnary
+-Save settings with Web Storage API
 
--save settings with Web Storage API
-
--default location
-
--col with full proerties rendering (activable by checkbox)
-
--popup filters sorter by baseitem with global checkboxes
+-Col with full properties rendering (activable by checkbox)
