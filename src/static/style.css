@@ -24,18 +24,22 @@
 }
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
-#filterItemsByType{
-    column-count: 4;
-    /* column-gap: 20px; */    
-}
 
-#filterItemsByType .category {
-/*     background-color: rgb(207, 232, 220);
-    border: 2px solid rgb(79, 185, 227); */
-    padding: 10px;
-    margin: 0 0 1em 0;
-    break-inside: avoid;
-    page-break-inside: avoid;    
+@media all and (min-width: 900px) {
+    #filterItemsByType{
+        column-count: 4;
+        /* column-gap: 20px; */    
+    }
+
+    #filterItemsByType .category {
+    /*     background-color: rgb(207, 232, 220);
+        border: 2px solid rgb(79, 185, 227); */
+        padding: 10px;
+        margin: 0 0 1em 0;
+        break-inside: avoid;
+        page-break-inside: avoid;    
+    }
+
 }
 
 .category-title{

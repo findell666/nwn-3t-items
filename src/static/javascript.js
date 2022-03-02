@@ -1,8 +1,8 @@
 function selectAll(elt){
-    $(elt).parent().find("[type=checkbox]").prop("checked", true);
+    $(elt).parent().find("[type=checkbox]").prop("checked", true).trigger("change");
 }
 function unselectAll(elt){
-    $(elt).parent().find("[type=checkbox]").prop("checked", false);
+    $(elt).parent().find("[type=checkbox]").prop("checked", false).trigger("change");;
 }
 
 function toggleAllBaseItemsCategory(elt){
