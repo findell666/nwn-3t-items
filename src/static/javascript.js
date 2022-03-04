@@ -14,7 +14,38 @@ function toggleAllBaseItemsCategory(elt){
     }
 }
 
+function removeFile(elt){
+    var fileName = $(elt).attr("file-name");
+    var attachments = $("#pcfiles")[0].files;
+    var fileBuffer = new DataTransfer();
+
+    for (var i = 0; i < attachments.length; i++) {
+        if (fileName !== attachments[i].name){
+            fileBuffer.items.add(attachments[i]);
+        }
+    }
+    $("#pcfiles")[0].files = fileBuffer.files;
+}
+
 $(function(){
+
+    $('input[type=file]').change(function (e) {
+        $('.element-to-paste-filename').empty();
+        for(var i = 0; i< e.target.files.length; i++){
+            var listItem = $("<li class='list-group-item d-flex justify-content-between align-items-start'></li>");
+            listItem.text(e.target.files[i].name);
+            var closeButton = $("<i title='Remove from list' file-name='"+e.target.files[i].name+"' class='bi-x'></i></li>");
+            closeButton.click(function(){
+                removeFile(this);
+                $(this).parent().remove();
+            });
+            listItem.append(closeButton);
+            $('.element-to-paste-filename').append(listItem);
+
+        }
+    });
+
+  
 
     //init state
     $("#filterItemsByType").hide();

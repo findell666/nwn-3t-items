@@ -100,9 +100,18 @@
                     ";"</span>.
             </p>
             <br />
-            <form action="/exportToCSV" id="exportToCsv" method="post" enctype="multipart/form-data" class="">
+            <form action="/exportToCSV" id="exportToCsv" method="post" enctype="multipart/form-data" class="col-6">
                 <label for="pcfiles">Select one or several character files (.bic)</label>
-                <input type="file" id="pcfiles" name="pcfile" accept=".bic,.gff" multiple />
+                <br/>
+                <div class="col-12">
+                    <div class="form-check">                
+                        <label >After clicking on "Select files" use CTRL or SHIFT to select multiple files.</label>                
+                        <input type="file" id="pcfiles" name="pcfile" accept=".bic,.gff" multiple />
+                        <div class="col-4">
+                            <ul class="element-to-paste-filename list-group"></ul>
+                        </div>
+                    </div>
+                </div>
                 <br />
                 <br />
                 Expand property : render subtypes on several columns (example for 'Skill bonus' : Craft weapon,

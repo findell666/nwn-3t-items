@@ -45,3 +45,9 @@
 .category-title{
     font-weight: 600;
 }
+
+.element-to-paste-filename i {
+    cursor: pointer;
+    color: red;
+    font-weight: 900;
+}
