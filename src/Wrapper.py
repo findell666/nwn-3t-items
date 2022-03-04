@@ -160,10 +160,30 @@ class ItemWrapper:
             # if indexStr not in stats.keys():        
             #     stats[indexStr] = []
 
-            # stats[indexStr].append({propString: propValue})
+            # stats[indexStr].append({propString: propValue})        
 
+        # calculate price and level req
+        # self.price = self.calculatePrice()
+
+        #at the end
         self.buildPropertyDictionnary()
         pass
+
+    def calculatePrice(self):
+
+        baseCost = baseLib.baseItemCost(self.baseItemCode)
+        if(isinstance(baseCost, str)):
+            return 0
+        Multiplier = 1
+        NegMultiplier = 0
+        SpellCosts = 0
+        MaxStack = 1
+        BaseMult = 1
+        AdditionalCost = 1
+
+        ItemCost = [baseCost + 1000*(Multiplier*Multiplier - NegMultiplier*NegMultiplier) + SpellCosts]*MaxStack*BaseMult + AdditionalCost        
+
+        return ItemCost
 
     def getTier(self):
         if(self.tag[0:2] == "bo" or self.tag[0:2] == "it"):
@@ -192,7 +212,7 @@ class ItemWrapper:
         keys.remove("propertiesDictionnary")
         keys.remove("gffItem")
         keys.remove("unicityString")
-        # keys.remove("baseItemCode")
+        keys.remove("baseItemCode")
 
         for p in range(len(self.properties)):
             prop = self.properties[p]

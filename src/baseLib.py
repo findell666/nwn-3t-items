@@ -96,6 +96,10 @@ def getBaseItemList():
         baseItems.append({"code":x , "name" : name, "category": int(category)})     
     return baseItems
 
+def baseItemCost(baseItem):
+    baseCost = getValueFrom2DA(BASEITEMS, 28, 28, baseItem, False)
+    return baseCost
+
 def getBaseItemsCategories():    
     baseItemsList = getBaseItemList()
     baseItemsCategories = np.empty(21, dtype=object) 
