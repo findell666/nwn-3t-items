@@ -37,6 +37,7 @@ tlk = Tlk(open(dialog, 'rb'))
 
 ITEMPROPDEF = "./resources/2da/itempropdef.2da"
 BASEITEMS = "./resources/2da/baseitems.2da"
+ITEMVALUE = "./resources/2da/itemvalue.2da" #custom 3T file
 
 #TUPLES : File path / Name pos / Label pos
 ALLS = ("./resources/2da/iprp_bonuscost.2da", 1, 2)
@@ -98,7 +99,29 @@ def getBaseItemList():
 
 def baseItemCost(baseItem):
     baseCost = getValueFrom2DA(BASEITEMS, 28, 28, baseItem, False)
-    return baseCost
+    try:
+        baseCost = int(baseCost)
+        return baseCost
+    except:
+        print("baseCost not an int " + baseCost)
+    return -1
+
+#BaseMult = ItemMultiplier column value from baseitems.2da.
+def baseMult(baseItem):
+    baseMult = getValueFrom2DA(BASEITEMS, 30, 30, baseItem, False)
+    try:
+        baseMult = float(baseMult)
+        return baseMult
+    except:
+        print("baseMult not a float " + baseMult)
+    return -1 
+
+def getItemvalueVal(index):
+    print(index)
+    return int(getValueFrom2DA(ITEMVALUE, 3, 3, index, False))
+
+def getItemvalueLabel(index):
+    return int(getValueFrom2DA(ITEMVALUE, 1, 1, index, False))   
 
 def getBaseItemsCategories():    
     baseItemsList = getBaseItemList()

@@ -30,7 +30,7 @@ def exportAsCSV(items, filePath, params):
     allKeysUnsorted = set(allKeys)
     
     # metaDataList
-    metaDataList = ["name", "displayName", "nb", "owner", "baseItem", "tier", "price"]
+    metaDataList = ["name", "displayName", "nb", "owner", "baseItem", "tier", "price", "levelReq"]
     metaDataListRemove = ["Light", "descId", "resref", "comment", "tag", "****"]
     if(filter_owner):
         metaDataList.remove("owner")
@@ -84,10 +84,10 @@ def exportAsCSV(items, filePath, params):
         for m in range(len(metaDataList)):
             key = metaDataList[m]
             if(key == "nb"):
-                currentStats.append(str(nbSeen))             
+                currentStats.append(str(nbSeen))
             else:
                 prop = item.renderItem().get(key, "")
-                currentStats.append(prop)
+                currentStats.append(str(prop))
 
         #then properties
         for p in range(len(finalPropertiesList)):
