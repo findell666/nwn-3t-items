@@ -89,6 +89,7 @@ class ItemWrapper:
         self.comment = comment.replace("\n", " - ").replace(";", " - ")
         self.tier = self.getTier()
         self.resref = gffItem.resref
+        self.additionalCost = gffItem.cost_additional
 
         # perfs ??
         self.unicityString = self.owner+self.resref+self.name+self.displayName
@@ -163,59 +164,59 @@ class ItemWrapper:
             # stats[indexStr].append({propString: propValue})        
 
         # calculate price and level req
-        # self.price = self.calculatePrice()
+        self.price = self.calculatePrice()
+        self.levelReq = self.getLevelReq()
 
         #at the end
         self.buildPropertyDictionnary()
         pass
 
-    def calculatePrice(self):
-
+    def calculatePrice(self):        
         baseCost = baseLib.baseItemCost(self.baseItemCode)
-        if(isinstance(baseCost, str)):
+        if(-1 == baseCost):
             return 0
+        baseMult = baseLib.baseMult(self.baseItemCode)
+        if(-1 == baseMult):
+            return 0
+
+        # AdditionalCost = AddCost Field from the Item Struct.
+        additionalCost = self.additionalCost
+
+        #TODO
         Multiplier = 1
         NegMultiplier = 0
         SpellCosts = 0
         MaxStack = 1
-        BaseMult = 1
-        AdditionalCost = 1
 
-        ItemCost = [baseCost + 1000*(Multiplier*Multiplier - NegMultiplier*NegMultiplier) + SpellCosts]*MaxStack*BaseMult + AdditionalCost        
+        ItemCost = (baseCost + 1000*(Multiplier*Multiplier - NegMultiplier*NegMultiplier) + SpellCosts)*MaxStack*baseMult + additionalCost    
+        return int(ItemCost)
 
-        return ItemCost
-
-    def getLevelReq(self):
-        pass
+    def getLevelReq(self):    
         # code from 3t, dichotmic search in itemvalue.2da
-        # int ItemLevelRequired(object oItem){
-        # string s2daName = "itemvalue";
-        # int start = 0;
-        # int end = 59;
-        # int found = 0;
-        # int x = -1;
-        # int iPrice = GetGoldPieceValue(oItem);
-        # int iGoldMin = StringToInt(Get2DAString(s2daName, "MAXSINGLEITEMVALUE", start));
-        # if(iPrice < iGoldMin) return 1;
-        # int iGoldMax = StringToInt(Get2DAString(s2daName, "MAXSINGLEITEMVALUE", end));
-        # if(iPrice >= iGoldMax) return 60;
-        # while(found == 0 && start < end){
-        # x = start + ((end - start) / 2);
-        # int iGoldMin = StringToInt(Get2DAString(s2daName, "MAXSINGLEITEMVALUE", x));
-        # int iGoldMax = StringToInt(Get2DAString(s2daName, "MAXSINGLEITEMVALUE", x+1));
-        # if (iGoldMax > iPrice && iPrice >= iGoldMin){
-        # found = 1;
-        # x = x+1;
-        # }
-        # else if (iGoldMax > iPrice){
-        # end = x;
-        # }
-        # else if (iGoldMin < iPrice){
-        # start = x + 1;
-        # }
-        # }
-        # return StringToInt(Get2DAString(s2daName, "LABEL", x));
-        # }
+        start = 0
+        end = 59
+        found = 0
+        x = -1
+        iPrice = self.price
+        iGoldMin = baseLib.getItemvalueVal(start)
+        if(iPrice < iGoldMin):
+            return 1        
+        iGoldMax = baseLib.getItemvalueVal(end)
+        if(iPrice >= iGoldMax):
+            return 60
+
+        while(found == 0 and start < end):
+            x = start + ((end - start) / 2)
+            iGoldMin = baseLib.getItemvalueVal(int(x))
+            iGoldMax = baseLib.getItemvalueVal(int(x+1))
+            if(iGoldMax > iPrice and iPrice >= iGoldMin):
+                found = 1
+                x = x+1        
+            elif(iGoldMax > iPrice):
+                end = x   
+            elif(iGoldMin < iPrice):
+                start = x + 1
+        return baseLib.getItemvalueLabel(int(x))
 
     def getTier(self):
         if(self.tag[0:2] == "bo" or self.tag[0:2] == "it"):
