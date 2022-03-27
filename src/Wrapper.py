@@ -185,6 +185,38 @@ class ItemWrapper:
 
         return ItemCost
 
+    def getLevelReq(self):
+        pass
+        # code from 3t, dichotmic search in itemvalue.2da
+        # int ItemLevelRequired(object oItem){
+        # string s2daName = "itemvalue";
+        # int start = 0;
+        # int end = 59;
+        # int found = 0;
+        # int x = -1;
+        # int iPrice = GetGoldPieceValue(oItem);
+        # int iGoldMin = StringToInt(Get2DAString(s2daName, "MAXSINGLEITEMVALUE", start));
+        # if(iPrice < iGoldMin) return 1;
+        # int iGoldMax = StringToInt(Get2DAString(s2daName, "MAXSINGLEITEMVALUE", end));
+        # if(iPrice >= iGoldMax) return 60;
+        # while(found == 0 && start < end){
+        # x = start + ((end - start) / 2);
+        # int iGoldMin = StringToInt(Get2DAString(s2daName, "MAXSINGLEITEMVALUE", x));
+        # int iGoldMax = StringToInt(Get2DAString(s2daName, "MAXSINGLEITEMVALUE", x+1));
+        # if (iGoldMax > iPrice && iPrice >= iGoldMin){
+        # found = 1;
+        # x = x+1;
+        # }
+        # else if (iGoldMax > iPrice){
+        # end = x;
+        # }
+        # else if (iGoldMin < iPrice){
+        # start = x + 1;
+        # }
+        # }
+        # return StringToInt(Get2DAString(s2daName, "LABEL", x));
+        # }
+
     def getTier(self):
         if(self.tag[0:2] == "bo" or self.tag[0:2] == "it"):
             splitted = self.tag.split("_")
