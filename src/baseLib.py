@@ -38,23 +38,24 @@ tlk = Tlk(open(dialog, 'rb'))
 ITEMPROPDEF = "./resources/2da/itempropdef.2da"
 BASEITEMS = "./resources/2da/baseitems.2da"
 ITEMVALUE = "./resources/2da/itemvalue.2da" #custom 3T file
+COST_TABLE = "./resources/2da/iprp_costtable.2da"
 
-#TUPLES : File path / Name pos / Label pos
-ALLS = ("./resources/2da/iprp_bonuscost.2da", 1, 2)
-SR_COST = ("./resources/2da/iprp_srcost.2da", 1, 2) # SR
-RES_COST = ("./resources/2da/iprp_resistcost.2da", 1, 2) # DR
-SKILL_COST = ("./resources/2da/iprp_skillcost.2da", 1, 2) # skills cost
-RED_COST = ("./resources/2da/iprp_redcost.2da", 1, 2) #bags
-WEIGHT_COST = ("./resources/2da/iprp_weightcost.2da", 1, 2) 
-CHARGE_COST = ("./resources/2da/iprp_chargecost.2da", 1, 2)
-MONST_COST = ("./resources/2da/iprp_monstcost.2da", 1, 2)
-DAMAGE_COST = ("./resources/2da/iprp_damagecost.2da", 1, 2)
-SPECIFIC_ALIGNMENT = ("./resources/2da/iprp_alignment.2da", 1, 2)
+#TUPLES : File path / Name pos / Label pos / Cost(price) pos
+ALLS = ("./resources/2da/iprp_bonuscost.2da", 1, 2, 3)
+SR_COST = ("./resources/2da/iprp_srcost.2da", 1, 2, 3) # SR
+RES_COST = ("./resources/2da/iprp_resistcost.2da", 1, 2, 4) # DR
+SKILL_COST = ("./resources/2da/iprp_skillcost.2da", 1, 2, 3) # skills cost
+RED_COST = ("./resources/2da/iprp_redcost.2da", 1, 2, 3) #bags
+WEIGHT_COST = ("./resources/2da/iprp_weightcost.2da", 1, 2, 3) 
+CHARGE_COST = ("./resources/2da/iprp_chargecost.2da", 1, 2, 3)
+MONST_COST = ("./resources/2da/iprp_monstcost.2da", 1, 2, 3)
+DAMAGE_COST = ("./resources/2da/iprp_damagecost.2da", 1, 2, 3)
+SPECIFIC_ALIGNMENT = ("./resources/2da/iprp_alignment.2da", 1, 2, 3)
 RACIAL_TYPE = ("./resources/2da/racialtypes.2da", 3, 1)
-AC_TYPE = ("./resources/2da/iprp_acmodtype.2da", 1, 2)
-ABILITY = ("./resources/2da/iprp_abilities.2da", 1, 2)
-ALIGNMENT_GROUP = ("./resources/2da/iprp_aligngrp.2da", 1, 2)
-BONUS_FEAT = ("./resources/2da/iprp_feats.2da", 1, 2)
+AC_TYPE = ("./resources/2da/iprp_acmodtype.2da", 1, 2, 3)
+ABILITY = ("./resources/2da/iprp_abilities.2da", 1, 2, 3)
+ALIGNMENT_GROUP = ("./resources/2da/iprp_aligngrp.2da", 1, 2, 3)
+BONUS_FEAT = ("./resources/2da/iprp_feats.2da", 1, 2, 3)
 CAST_SPELL = ("./resources/2da/iprp_spells.2da", 2, 1)
 CLASS = ("./resources/2da/classes.2da", 2, 1)
 DAMAGE_TYPE = ("./resources/2da/iprp_damagetype.2da", 1, 2)
@@ -62,18 +63,18 @@ EXTRA_MELEE_DAMAGE_TYPE = ("./resources/2da/iprp_combatdam.2da", 1, 2)
 IMMUNITY = ("./resources/2da/iprp_immunity.2da", 1, 2)
 IMMU_COST = ("./resources/2da/iprp_immuncost.2da", 1, 2)
 IMMUNITY_SPELL_SCHOOL = ("./resources/2da/spellschools.2da", 3, 1)
-ON_HIT_COST = ("./resources/2da/iprp_onhitcost.2da", 1, 2)
-ON_HIT_DUR = ("./resources/2da/iprp_onhitdur.2da", 1, 2)
-ON_HIT = ("./resources/2da/iprp_onhit.2da", 1, 2)
+ON_HIT_COST = ("./resources/2da/iprp_onhitcost.2da", 1, 2, 3)
+ON_HIT_DUR = ("./resources/2da/iprp_onhitdur.2da", 1, 2, 3)
+ON_HIT = ("./resources/2da/iprp_onhit.2da", 1, 2, 3)
 ON_HIT_CAST_SPELL = ("./resources/2da/iprp_onhitspell.2da", 2, 1)
-ON_MONSTER_HIT = ("./resources/2da/iprp_monsterhit.2da", 1, 2)
+ON_MONSTER_HIT = ("./resources/2da/iprp_monsterhit.2da", 1, 2, 3)
 POISON_ON_MONSTER_HIT = ("./resources/2da/poison.2da", 2, 1)
-SAVING_THROW_BONUS = ("./resources/2da/iprp_saveelement.2da", 1, 2)
-SAVING_THROW_BONUS_SPECIFIC = ("./resources/2da/iprp_savingthrow.2da", 1, 2)
+SAVING_THROW_BONUS = ("./resources/2da/iprp_saveelement.2da", 1, 2, 3)
+SAVING_THROW_BONUS_SPECIFIC = ("./resources/2da/iprp_savingthrow.2da", 1, 2, 3)
 SKILL = ("./resources/2da/skills.2da", 2, 1)
-SPECIAL_WALK = ("./resources/2da/iprp_walk.2da", 1, 2)
-TRAP = ("./resources/2da/iprp_traps.2da", 1, 2)
-UNLIMITED_AMMUNITION = ("./resources/2da/iprp_ammotype.2da", 1, 2)
+SPECIAL_WALK = ("./resources/2da/iprp_walk.2da", 1, 2, 3)
+TRAP = ("./resources/2da/iprp_traps.2da", 1, 2, 3)
+UNLIMITED_AMMUNITION = ("./resources/2da/iprp_ammotype.2da", 1, 2, 3)
 VISUAL_EFFECT = ("./resources/2da/iprp_visualfx.2da", 2, 1)
 
 # make a 2DA for that ?
@@ -116,10 +117,11 @@ def baseMult(baseItem):
         print("baseMult not a float " + baseMult)
     return -1 
 
+# to get level req, range
 def getItemvalueVal(index):
-    print(index)
     return int(getValueFrom2DA(ITEMVALUE, 3, 3, index, False))
 
+# to get level req final result
 def getItemvalueLabel(index):
     return int(getValueFrom2DA(ITEMVALUE, 1, 1, index, False))   
 
@@ -155,6 +157,12 @@ def getValueFrom2DA(f, pos1, pos2, value, useResRef=True):
 
 def getPropertyName2DAValue(prop):
     return getValueFrom2DA(ITEMPROPDEF, 7, 7, prop)
+
+def getPropertyCost2DAValue(propn):
+    return getValueFrom2DA(ITEMPROPDEF, 4, 4, propn, False)
+
+def getSubTypeResRef2DAValue(propn):
+    return getValueFrom2DA(ITEMPROPDEF, 3, 3, propn, False)
 
 #from LETO, I didnt find the info in nwn
 def getSubType2DAFile(prop):
@@ -244,7 +252,10 @@ def getCostValue2DAFile(prop, sub):
         return (WEIGHT_COST, True)
     #immunity bonus        
     if prop == 20:
-        return (IMMU_COST, True)        
+        return (IMMU_COST, True)
+    #bonus feat
+    if prop == 12:
+        return (BONUS_FEAT, True)    
     return None  
     
 def getParam12DAFile(prop, sub):
@@ -265,6 +276,7 @@ def getSubType2DAResRef(prop, sub):
         return ""
     return sub   
     
+# this is not the "cost" in term of price, but in term of "value"
 def getCostValue2DAResRef(prop, sub, cost):
     res = getCostValue2DAFile(int(prop), int(sub))
     if res != None:
@@ -274,6 +286,17 @@ def getCostValue2DAResRef(prop, sub, cost):
     if cost == 0:
         return ""
     return cost
+
+# this is the "cost" to calculate the price (Dda[3] is Cost column)
+def getPriceCostValue2DAResRef(prop, sub):
+    res = getCostValue2DAFile(int(prop), int(sub))
+    if res != None:
+        Dda = res[0]
+        return getValueFrom2DA(Dda[0], Dda[1], Dda[3], sub, False)
+    return 0
+
+def getResRefCostTable(costTable):
+    return getValueFrom2DA(COST_TABLE, 1, 1, costTable, False)
     
 def getParam12DAResRef(prop, sub, param1):
     res = getParam12DAFile(int(prop), int(sub))
@@ -335,8 +358,7 @@ def getPC(bicFile):
     return pc
 
 def getGFFItemsFromPC(pc, params):
-    exclude_equips = params["exclude_equips"]    
-    print(params)
+    exclude_equips = params["exclude_equips"]
     equips = pc.equips
     if(exclude_equips):
         equips = []
@@ -404,3 +426,14 @@ def rawGetItems(bicFile):
     return items_str
                        
 
+def resRefTo2DAFile(resRef):
+    return "./resources/2da/"+resRef.lower()+".2da"
+
+def getCostValue(resRef, costValue):
+    file = resRefTo2DAFile(resRef)    
+    return float(getValueFrom2DA(file, 3, 3, costValue, False))
+
+def getSubtypeCost(resRef, sub):
+    file = resRefTo2DAFile(resRef)
+    print("file" + file + " " + str(sub))
+    return float(getValueFrom2DA(file, 3, 3, sub, False))

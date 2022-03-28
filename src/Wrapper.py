@@ -100,7 +100,8 @@ class ItemWrapper:
 
         # set the properties
         properties = gffItem.properties
-
+        self.negMultiplier = 0
+        self.multiplier = 0
         for y in range(len(properties)):
             prop = ItemProperty(properties[y], gffItem)
             prop = prop.gff
@@ -139,7 +140,25 @@ class ItemWrapper:
                 propString = ""
                 expanded = True
 
-            # if expanded it's whole property
+            # calculate the property cost 
+            #To calculate the cost of a single Item Property, use the following formula:
+            #ItemPropertyCost = PropertyCost + SubtypeCost + CostValue
+            
+            # If an Item Property has a PropertyName of 15 (Cast Spell), then omit it from the Multiplier/NegMultiplier totals. 
+            # It will be handled when calculating the SpellCosts instead.
+            ItemPropertyCost = 0
+            if(propn != 15):
+                PropertyCost = ItemPropertyWrapper.getPropertyCost(prop)
+                SubtypeCost = ItemPropertyWrapper.getSubtypeCost(prop, PropertyCost)
+                CostValue = ItemPropertyWrapper.getCostValue(prop)
+                ItemPropertyCost = PropertyCost + SubtypeCost + CostValue
+                if(ItemPropertyCost < 0):
+                    self.negMultiplier += ItemPropertyCost
+                else:
+                    self.multiplier += ItemPropertyCost
+
+
+            # if expanded it's whole property (this code shouldnt be here, move it to csvExport.py)
             if(expanded):
                 self.addProperty(propn, prop.type, sub, cost, propNameString, propSubTypetring, propValue, prop, expanded)
             # if not expanded we add the value to existing one
@@ -183,8 +202,8 @@ class ItemWrapper:
         additionalCost = self.additionalCost
 
         #TODO
-        Multiplier = 1
-        NegMultiplier = 0
+        Multiplier = self.multiplier
+        NegMultiplier = self.negMultiplier
         SpellCosts = 0
         MaxStack = 1
 
@@ -289,6 +308,8 @@ class ItemPropertyWrapper:
         self.value = str(value)
         self.isExpanded = expanded
         self.gffProp = gffProp
+        self.costTable = gffProp.cost_table
+        self.costValue = gffProp.cost_value
 
     def toString(self):
         print("("+str(self.id)+","+str(self.subId)+","+str(self.cost)+","+str(self.name)+","+str(self.subType)+","+str(self.value)+")")
@@ -306,3 +327,47 @@ class ItemPropertyWrapper:
         else:
             value = propString + " " + str(self.value)
         return value            
+
+    #In itempropdef.2da, get the floating point value in the Cost column, at the row indexed by the PropertyName Field of the ItemProperty Struct. 
+    # If the Cost column value is ****, treat it as 0. This floating point value is the PropertyCost.
+    def getPropertyCost(gffProp):
+        propn = gffProp.gff["PropertyName"]
+        cost = baseLib.getPropertyCost2DAValue(propn)
+        if(cost == "****"):
+            return 0
+        return float(cost)
+        
+        # sub = prop.gff["Subtype"]
+        # cost = prop.gff["CostValue"] 
+    #If the PropertyCost obtained above from itempropdef.2da was 0, then get the ResRef in the SubTypeResRef column of itempropdef.2da, 
+    # at the row indexed by the PropertyName Field of the ItemProperty Struct. This is the resref of the subtype table 2da.
+    #In the subtype 2da, get the floating point value in the Cost column at the row indexed by the Subtype Field of the ItemProperty Struct. This floating point value is the SubtypeCost.
+    #Only get the SubtypeCost if the PropertyCost was 0. If the PropertyCost was greater than 0, then the SubtypeCost is automatically 0 instead.
+    def getSubtypeCost(gffProp, cost):
+        propn = gffProp.gff["PropertyName"]
+        sub = gffProp.gff["Subtype"]
+        cost = gffProp.gff["CostValue"]
+        if(cost == 0):
+            print("propn " + str(propn) + " sub " + str(sub) + " cost " + str(cost))
+            resRef = baseLib.getSubTypeResRef2DAValue(propn)
+            print("->resRef" + resRef)
+            if("IPRP_ALIGNGRP" == resRef or "IPRP_VISUALFX" == resRef):
+                return 0
+            if("****" == resRef):
+                resRef = "iprp_bonuscost"
+            #val = baseLib.getPriceCostValue2DAResRef(propn, sub)
+            val = baseLib.getSubtypeCost(resRef, sub)
+            return val
+            # subTypeResRef = baseLib.getSubTypeResRef2DAValue(propn)
+        return 0
+
+    #In iprp_costtable.2da, get the string in the Name column at the row indexed by the CostTable Field in the ItemProperty Struct. This is the ResRef of the cost table 2da.
+    #In the cost table, get the floating point value in the Cost column in the row indexed by the CostValue Field in the ItemProperty Struct. This floating point value is the CostValue.
+    def getCostValue(gffProp):
+        costTable = gffProp.cost_table
+        costValue = gffProp.cost_value
+        resRef = baseLib.getResRefCostTable(costTable)
+        if("****" == resRef or "iprp_base1" == resRef.lower()):
+            return 0
+        cost = baseLib.getCostValue(resRef, costTable)
+        return cost
