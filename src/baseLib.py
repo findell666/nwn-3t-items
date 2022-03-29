@@ -435,5 +435,4 @@ def getCostValue(resRef, costValue):
 
 def getSubtypeCost(resRef, sub):
     file = resRefTo2DAFile(resRef)
-    print("file" + file + " " + str(sub))
     return float(getValueFrom2DA(file, 3, 3, sub, False))

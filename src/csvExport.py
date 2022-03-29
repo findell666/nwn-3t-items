@@ -30,8 +30,8 @@ def exportAsCSV(items, filePath, params):
     allKeysUnsorted = set(allKeys)
     
     # metaDataList
-    metaDataList = ["name", "displayName", "nb", "owner", "baseItem", "tier", "price", "levelReq"]
-    metaDataListRemove = ["Light", "descId", "resref", "comment", "tag", "****"]
+    metaDataList = ["name", "displayName", "nb", "owner", "baseItem", "tier", "condensedString"]
+    metaDataListRemove = ["Light", "descId", "resref", "comment", "tag", "****", "price", "levelReq"]
     if(filter_owner):
         metaDataList.remove("owner")
     metaDataHeaderStr = joinStr.join(metaDataList)

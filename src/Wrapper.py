@@ -10,6 +10,16 @@ from pynwn.file.tlk import Tlk
 dialog = os.path.join("./resources/tlk/", 'dialog.tlk')    
 tlk = Tlk(open(dialog, 'rb'))
 
+condensedDict = {"Strength" : "STR", "Dexterity" : "DEX", "Constitution" : "CON", "Intelligence": "INT", "Wisdom" : "WIS", "Charisma" : "CHA",
+"Reflex" : "reflex", "Fortitude" : "fort", "Universal" : "univ", "Mind Affecting" : "mind", "Spellcraft"  : "sc", "Animal Empathy" : "ae", "Move Silently": "ms", "Spot" : "spot", "Craft Weapon" : "cw", "Use Magic Device" : "umd",
+"Discipline" : "disc", "Concentration": "conc",
+"Spell Resistance:" : "SR",
+"Regeneration:" : "regen", "Immunity:" : "immu", 
+"Armor Bonus:" : "AC", "Enhancement Bonus:" : "EB",
+"Electrical Resist" : "elect res", "Acid Resist" : "acid res",
+"Positive Energy" : "pos",
+"Spell Penetration" : "Spell pen", "Wizard" : "wiz",
+}
 
 def statToCSVString(stat):
     statStr = ""
@@ -31,6 +41,12 @@ def statToCSVString(stat):
 
     return statStr
 
+def toCondensedString(string):
+    if(string in condensedDict):
+        return condensedDict[string]
+    else:
+        return string
+
 class ItemWrapper:
     name=""
     baseItem=""
@@ -43,14 +59,13 @@ class ItemWrapper:
     cost=""
     level=""
     tier=""
-    resref=""
-    properties = []
-    propertiesDictionnary = {}        
+    resref=""     
     tagsSeen = {}
     gffItem=None
 
     def __init__(self, gffItem, owner, params):
         self.properties = []
+        self.propertiesRaw = [] #to create condensed column
         self.propertiesDictionnary = {}
 
         self.gffItem = gffItem
@@ -90,6 +105,9 @@ class ItemWrapper:
         self.tier = self.getTier()
         self.resref = gffItem.resref
         self.additionalCost = gffItem.cost_additional
+        self.castSpellCosts = []
+
+        print(self.name + " "  +self.displayName)
 
         # perfs ??
         self.unicityString = self.owner+self.resref+self.name+self.displayName
@@ -146,18 +164,24 @@ class ItemWrapper:
             
             # If an Item Property has a PropertyName of 15 (Cast Spell), then omit it from the Multiplier/NegMultiplier totals. 
             # It will be handled when calculating the SpellCosts instead.
-            ItemPropertyCost = 0
-            if(propn != 15):
-                PropertyCost = ItemPropertyWrapper.getPropertyCost(prop)
-                SubtypeCost = ItemPropertyWrapper.getSubtypeCost(prop, PropertyCost)
-                CostValue = ItemPropertyWrapper.getCostValue(prop)
+            PropertyCost = ItemPropertyWrapper.getPropertyCost(prop)
+            SubtypeCost = ItemPropertyWrapper.getSubtypeCost(prop, PropertyCost)
+            CostValue = ItemPropertyWrapper.getCostValue(prop)
+            #print("PropertyCost " + str(PropertyCost))
+            #print("SubtypeCost " + str(SubtypeCost))
+            #print("CostValue " + str(CostValue))
+            if(propn != 15):                
                 ItemPropertyCost = PropertyCost + SubtypeCost + CostValue
                 if(ItemPropertyCost < 0):
                     self.negMultiplier += ItemPropertyCost
                 else:
                     self.multiplier += ItemPropertyCost
 
+            if(propn == 15):
+                self.castSpellCosts.append((PropertyCost + CostValue)* SubtypeCost)
 
+            self.addPropertyRaw(propn, prop.type, sub, cost, propNameString, propSubTypetring, propValue, prop, expanded)
+            
             # if expanded it's whole property (this code shouldnt be here, move it to csvExport.py)
             if(expanded):
                 self.addProperty(propn, prop.type, sub, cost, propNameString, propSubTypetring, propValue, prop, expanded)
@@ -167,7 +191,7 @@ class ItemWrapper:
                 for z in range(len(self.properties)):
                     currentProp = self.properties[z]
                     if(currentProp.id == propn and currentProp.propType == prop.type):
-                        currentProp.value = currentProp.value + " " +  propSubTypetring + " "+ propValue
+                        currentProp.value = currentProp.value + " " +  propSubTypetring + " " + propValue
                         found = True
                         break
                 if(not found):
@@ -180,15 +204,28 @@ class ItemWrapper:
             # if indexStr not in stats.keys():        
             #     stats[indexStr] = []
 
-            # stats[indexStr].append({propString: propValue})        
+            # stats[indexStr].append({propString: propValue})
 
+        #at the end
+
+        #compile properties into a single string
+        self.condensedString = self.name + " : "
+        for z in range(len(self.propertiesRaw)):
+            currentProp = self.propertiesRaw[z]
+
+            if(not currentProp.value):
+                self.condensedString += toCondensedString(currentProp.name) + " " + toCondensedString(currentProp.subType) + ", "
+            else:
+                nameStr = toCondensedString(currentProp.name)
+                if(currentProp.subType):
+                    nameStr = toCondensedString(currentProp.subType)
+                self.condensedString += nameStr + " " + toCondensedString(currentProp.value) + ", "
+
+        self.condensedString = self.condensedString[:-2]
         # calculate price and level req
         self.price = self.calculatePrice()
         self.levelReq = self.getLevelReq()
-
-        #at the end
         self.buildPropertyDictionnary()
-        pass
 
     def calculatePrice(self):        
         baseCost = baseLib.baseItemCost(self.baseItemCode)
@@ -203,9 +240,24 @@ class ItemWrapper:
 
         #TODO
         Multiplier = self.multiplier
-        NegMultiplier = self.negMultiplier
-        SpellCosts = 0
+        NegMultiplier = self.negMultiplier        
         MaxStack = 1
+        SpellCosts = 0
+
+        # SpellCosts
+        # After adjusting the CastSpellCosts, add them up to obtain the total SpellCosts value. 
+        # Use the total SpellCosts to calculate the total ItemCost using the formula given at the very beginning of Section 4.4.</code>
+        if len(self.castSpellCosts):
+            firstMax = max(self.castSpellCosts)
+            self.castSpellCosts.remove(firstMax)
+            secondMax = 0
+            if len(self.castSpellCosts):                     
+                secondMax = max(self.castSpellCosts)
+
+            SpellCosts = firstMax + secondMax * 0.75
+
+            for m in range(len(self.castSpellCosts)):
+                SpellCosts += self.castSpellCosts[m] * 0.5
 
         ItemCost = (baseCost + 1000*(Multiplier*Multiplier - NegMultiplier*NegMultiplier) + SpellCosts)*MaxStack*baseMult + additionalCost    
         return int(ItemCost)
@@ -257,15 +309,22 @@ class ItemWrapper:
         itemPropertyWrapper = ItemPropertyWrapper(id, propType, subId, cost, name, subType, value, gffProp, expanded)
         self.properties.append(itemPropertyWrapper)
 
+    def addPropertyRaw(self, id, propType, subId, cost, name, subType, value, gffProp, expanded):
+        itemPropertyWrapper = ItemPropertyWrapper(id, propType, subId, cost, name, subType, value, gffProp, expanded)
+        self.propertiesRaw.append(itemPropertyWrapper)
 
     def getAllKeys(self):        
         keys = list(self.__dict__.keys())
         keys.remove("properties")
+        keys.remove("propertiesRaw")
         keys.remove("propertiesDictionnary")
         keys.remove("gffItem")
         keys.remove("unicityString")
         keys.remove("baseItemCode")
-
+        keys.remove("additionalCost")
+        keys.remove("negMultiplier")
+        keys.remove("castSpellCosts")
+        
         for p in range(len(self.properties)):
             prop = self.properties[p]
             keys.append(prop.name)            
@@ -348,17 +407,15 @@ class ItemPropertyWrapper:
         sub = gffProp.gff["Subtype"]
         cost = gffProp.gff["CostValue"]
         if(cost == 0):
-            print("propn " + str(propn) + " sub " + str(sub) + " cost " + str(cost))
+            #print("propn " + str(propn) + " sub " + str(sub) + " cost " + str(cost))
             resRef = baseLib.getSubTypeResRef2DAValue(propn)
-            print("->resRef" + resRef)
+            #print("->resRef" + resRef)
             if("IPRP_ALIGNGRP" == resRef or "IPRP_VISUALFX" == resRef):
                 return 0
             if("****" == resRef):
                 resRef = "iprp_bonuscost"
-            #val = baseLib.getPriceCostValue2DAResRef(propn, sub)
             val = baseLib.getSubtypeCost(resRef, sub)
             return val
-            # subTypeResRef = baseLib.getSubTypeResRef2DAValue(propn)
         return 0
 
     #In iprp_costtable.2da, get the string in the Name column at the row indexed by the CostTable Field in the ItemProperty Struct. This is the ResRef of the cost table 2da.
