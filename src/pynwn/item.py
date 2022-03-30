@@ -81,6 +81,7 @@ class Item(object):
         self._scripts = None
         self._vars = None
         self.container = None
+        self.pos = None
 
         self.is_instance = instance
         if not instance:
@@ -93,6 +94,9 @@ class Item(object):
                 self.gff = Gff(resource[0])
         else:
             self.gff = resource
+
+    def setPos(self, pos):
+        self.pos = pos
 
     def stage(self):
         if self.gff.is_loaded() and self.container:

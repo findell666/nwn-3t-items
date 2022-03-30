@@ -97,7 +97,7 @@ def exportToCSV():
             return send_file(os.path.join(app.config['UPLOAD_FOLDER'], csvFileName), as_attachment=True)
 
         return redirect('/')            
-    return redirect('/')        
+    return redirect('/')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))

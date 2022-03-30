@@ -1,7 +1,7 @@
 from pynwn.file.gff import Gff, make_gff_property, make_gff_locstring_property
 from pynwn.file.gff import GffInstance
 
-from pynwn.item import ItemInstance
+from pynwn.item import RepositoryItem, ItemInstance
 
 __all__ = ['PlayerCharacter']
 
@@ -137,9 +137,8 @@ class PlayerCharacter(object):
         for p in self.gff['ItemList']:
             gff_inst = GffInstance(self.gff, 'ItemList', i)
             st_inst = ItemInstance(gff_inst, self)
-
-            equip_slot = p['_STRUCT_TYPE_']
-            result.append((equip_slot, st_inst))
+            repo_pos = (p['Repos_PosX'], p['Repos_Posy'])
+            result.append((repo_pos, st_inst))
             i += 1
 
         return result    

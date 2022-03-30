@@ -47,21 +47,25 @@ def toCondensedString(string):
     else:
         return string
 
-class ItemWrapper:
-    name=""
-    baseItem=""
-    baseItemCode=""
-    displayName=""
-    tag=""
-    descId=""
-    comment=""
-    owner=""
-    cost=""
-    level=""
-    tier=""
-    resref=""     
+class ItemWrapper: 
+
+    equip_slots = {
+        1 : "helmet slot",
+        2: "armor slot",
+        4 : "boots slot", 
+        8 : "bracers slot",
+        16 : "right hand slot",
+        32 : "left hand slot",
+        64 : "cloak slot",
+        128 : "ring slot",
+        256 : "ring slot",
+        512 : "amulet slot",
+        1024 : "belt slot",
+        2048 : "arrow slot",
+        4096 : "bullet slot",
+        8192 : "bolt slot",
+    }
     tagsSeen = {}
-    gffItem=None
 
     def __init__(self, gffItem, owner, params):
         self.properties = []
@@ -107,7 +111,22 @@ class ItemWrapper:
         self.additionalCost = gffItem.cost_additional
         self.castSpellCosts = []
 
-        print(self.name + " "  +self.displayName)
+        print(gffItem.pos)
+        print(gffItem.parentContainer)
+        # render position
+        if gffItem.parentContainer == "equipment":
+            print(gffItem.pos)
+            self.position = self.equip_slots[gffItem.pos]
+
+        if gffItem.parentContainer == "inventory":
+            x = gffItem.pos[0].val
+            y = gffItem.pos[1].val + 1
+            nthTab = int(y / 6)
+            row = (y % 6)
+            col = x + 1
+            self.position = "tab " + str(nthTab) + " row " + str(row) + " col " + str(col)
+
+        # print(self.name + " "  +self.displayName)
 
         # perfs ??
         self.unicityString = self.owner+self.resref+self.name+self.displayName
@@ -164,9 +183,9 @@ class ItemWrapper:
             
             # If an Item Property has a PropertyName of 15 (Cast Spell), then omit it from the Multiplier/NegMultiplier totals. 
             # It will be handled when calculating the SpellCosts instead.
-            PropertyCost = ItemPropertyWrapper.getPropertyCost(prop)
-            SubtypeCost = ItemPropertyWrapper.getSubtypeCost(prop, PropertyCost)
-            CostValue = ItemPropertyWrapper.getCostValue(prop)
+            PropertyCost = 0 #ItemPropertyWrapper.getPropertyCost(prop)
+            SubtypeCost = 0 #ItemPropertyWrapper.getSubtypeCost(prop, PropertyCost)
+            CostValue = 0 #ItemPropertyWrapper.getCostValue(prop)
             #print("PropertyCost " + str(PropertyCost))
             #print("SubtypeCost " + str(SubtypeCost))
             #print("CostValue " + str(CostValue))
@@ -412,7 +431,7 @@ class ItemPropertyWrapper:
             #print("->resRef" + resRef)
             if("IPRP_ALIGNGRP" == resRef or "IPRP_VISUALFX" == resRef):
                 return 0
-            if("****" == resRef):
+            if("****" == resRef or 255 == resRef):
                 resRef = "iprp_bonuscost"
             val = baseLib.getSubtypeCost(resRef, sub)
             return val
@@ -424,6 +443,8 @@ class ItemPropertyWrapper:
         costTable = gffProp.cost_table
         costValue = gffProp.cost_value
         resRef = baseLib.getResRefCostTable(costTable)
+        if(255 == resRef):
+            return 0
         if("****" == resRef or "iprp_base1" == resRef.lower()):
             return 0
         cost = baseLib.getCostValue(resRef, costTable)

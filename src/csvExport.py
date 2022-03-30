@@ -30,7 +30,7 @@ def exportAsCSV(items, filePath, params):
     allKeysUnsorted = set(allKeys)
     
     # metaDataList
-    metaDataList = ["name", "displayName", "nb", "owner", "baseItem", "tier", "condensedString"]
+    metaDataList = ["name", "displayName", "nb", "owner", "position", "baseItem", "tier", "condensedString"]
     metaDataListRemove = ["Light", "descId", "resref", "comment", "tag", "****", "price", "levelReq"]
     if(filter_owner):
         metaDataList.remove("owner")

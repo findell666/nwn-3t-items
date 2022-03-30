@@ -346,9 +346,8 @@ def getBagItems(item):
     for p in item.gff['ItemList']:
         gff_inst = GffInstance(item.gff, 'ItemList', i)
         st_inst = ItemInstance(gff_inst, item)
-
-        equip_slot = p['_STRUCT_TYPE_']
-        result.append((equip_slot, st_inst))
+        repo_pos = (p['Repos_PosX'], p['Repos_Posy'], item.pos)
+        result.append((repo_pos, st_inst))
         i += 1
 
     return result
@@ -367,7 +366,7 @@ def getGFFItemsFromPC(pc, params):
     bags = []
     #fill the lists
     for x in range(len(equips)):
-        item = ItemInstance(equips[x][1], pc)
+        item = Item(equips[x][1], pc)
         item = item.gff
         
         # BAG OF HOLDING SCAN ITEMS
@@ -380,10 +379,27 @@ def getGFFItemsFromPC(pc, params):
     items = []
     i = 0
     for rg in range(len(equips)):
-       i = i + 1
-       item = ItemInstance(equips[rg][1], rg)
-       item = item.gff
-       items.append(item)
+        i = i + 1
+        item = ItemInstance(equips[rg][1], rg)
+        item = item.gff
+        print(equips[rg][0])
+        item.setPos(equips[rg][0])
+
+        print(item.pos)
+        if type(item.pos) is tuple:
+            # in inentory
+            if len(item.pos) == 2:
+                item.parentContainer = "inventory"
+            # in a bag
+            if len(item.pos) == 3:
+                item.parentContainer = "bag"
+                item.parentPos = item.pos[2]
+                item.pos = (item.pos[0], item.pos[1])
+        else:
+            # equiped
+            item.parentContainer = "equipment"
+
+        items.append(item)
     return items
 
 def rawGetItems(bicFile):
