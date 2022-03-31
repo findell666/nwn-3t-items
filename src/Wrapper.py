@@ -47,6 +47,12 @@ def toCondensedString(string):
     else:
         return string
 
+def getInventoryItemPositionString(x, y):
+    nthTab = int(y / 6) + 1
+    row = (y % 6)
+    col = x + 1
+    return "tab " + str(nthTab) + " row " + str(row) + " col " + str(col)
+
 class ItemWrapper: 
 
     equip_slots = {
@@ -115,16 +121,21 @@ class ItemWrapper:
         print(gffItem.parentContainer)
         # render position
         if gffItem.parentContainer == "equipment":
-            print(gffItem.pos)
             self.position = self.equip_slots[gffItem.pos]
 
         if gffItem.parentContainer == "inventory":
             x = gffItem.pos[0].val
+            y = gffItem.pos[1].val + 1            
+            self.position = getInventoryItemPositionString(x, y)
+
+        if gffItem.parentContainer == "bag":
+            x = gffItem.pos[0].val
             y = gffItem.pos[1].val + 1
-            nthTab = int(y / 6)
-            row = (y % 6)
+            xBag = gffItem.parentPos[0].val
+            yBag = gffItem.parentPos[1].val + 1
+            row = y
             col = x + 1
-            self.position = "tab " + str(nthTab) + " row " + str(row) + " col " + str(col)
+            self.position = "bag " + getInventoryItemPositionString(xBag, yBag) + ", row " + str(row) + " col " + str(col)            
 
         # print(self.name + " "  +self.displayName)
 

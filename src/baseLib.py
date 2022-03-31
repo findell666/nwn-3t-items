@@ -366,8 +366,9 @@ def getGFFItemsFromPC(pc, params):
     bags = []
     #fill the lists
     for x in range(len(equips)):
-        item = Item(equips[x][1], pc)
+        item = Item(equips[x][1], pc)        
         item = item.gff
+        item.setPos(equips[x][0]) #just to be used in getBagItems
         
         # BAG OF HOLDING SCAN ITEMS
         if item.base_type == 66:
@@ -382,10 +383,8 @@ def getGFFItemsFromPC(pc, params):
         i = i + 1
         item = ItemInstance(equips[rg][1], rg)
         item = item.gff
-        print(equips[rg][0])
         item.setPos(equips[rg][0])
 
-        print(item.pos)
         if type(item.pos) is tuple:
             # in inentory
             if len(item.pos) == 2:
@@ -404,10 +403,7 @@ def getGFFItemsFromPC(pc, params):
 
 def rawGetItems(bicFile):
     items_str = ""
-    #bicFile = "illir1.bic" #sys.argv[1]
     pc = PlayerCharacter(bicFile, DirectoryContainer("./tmp/"))
-    #TODO get portrait etc
-    #TODO print(pc.get_name_first())
 
     equips = pc.equips
     items = pc.items 
@@ -440,7 +436,6 @@ def rawGetItems(bicFile):
             
     items_str += "TOTAL : " + str(i) + " ITEMS"
     return items_str
-                       
 
 def resRefTo2DAFile(resRef):
     return "./resources/2da/"+resRef.lower()+".2da"

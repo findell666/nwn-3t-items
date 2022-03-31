@@ -82,6 +82,7 @@ class Item(object):
         self._vars = None
         self.container = None
         self.pos = None
+        self.parentPos = None
 
         self.is_instance = instance
         if not instance:
