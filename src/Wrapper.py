@@ -117,8 +117,6 @@ class ItemWrapper:
         self.additionalCost = gffItem.cost_additional
         self.castSpellCosts = []
 
-        print(gffItem.pos)
-        print(gffItem.parentContainer)
         # render position
         if gffItem.parentContainer == "equipment":
             self.position = self.equip_slots[gffItem.pos]
