@@ -14,7 +14,6 @@ from pynwn.file.tlk import Tlk
 
 #my items, all items onglets?
 #item sheet, last seen by (autorisation)
-#tiers of items
 #whishlist
 #custom2DA files, select default peristent world.
 #server normal, server EE, bandeau différent
@@ -76,6 +75,7 @@ SPECIAL_WALK = ("./resources/2da/iprp_walk.2da", 1, 2, 3)
 TRAP = ("./resources/2da/iprp_traps.2da", 1, 2, 3)
 UNLIMITED_AMMUNITION = ("./resources/2da/iprp_ammotype.2da", 1, 2, 3)
 VISUAL_EFFECT = ("./resources/2da/iprp_visualfx.2da", 2, 1)
+SOAK_COST = ("./resources/2da/iprp_soakcost.2da", 2, 2)
 
 # make a 2DA for that ?
 CATEGORIES = ["none", "melee", "ranged", "shield", "armor", "helmet", "ammo", "thrown", "staves", "potion", "scroll", "thieves' tools", "misc",
@@ -213,6 +213,7 @@ def getSubType2DAFile(prop):
         70 : TRAP,
         61 : UNLIMITED_AMMUNITION,
         83 : VISUAL_EFFECT,
+        22 : ALLS,
         #1 - 9, 22, 45, 56 - 59 Enhancement, Attack, AC, ...         
     }
     return switcher.get(prop, None)
@@ -255,7 +256,10 @@ def getCostValue2DAFile(prop, sub):
         return (IMMU_COST, True)
     #bonus feat
     if prop == 12:
-        return (BONUS_FEAT, True)    
+        return (BONUS_FEAT, True)
+    #domage reduction
+    if prop == 22:
+        return (SOAK_COST, False)
     return None  
     
 def getParam12DAFile(prop, sub):

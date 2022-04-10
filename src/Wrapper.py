@@ -104,7 +104,7 @@ class ItemWrapper:
         comment = str(gffItem.comment)
         if(None == comment or 'None' == comment):
             comment = ""
-        
+
         baseItem = gffItem.base_type
         self.baseItem = baseLib.getBaseItemName(baseItem)
         self.baseItemCode = baseItem
@@ -144,6 +144,8 @@ class ItemWrapper:
         else:
             ItemWrapper.tagsSeen[self.unicityString] = 1
 
+        print(self.name +  "" + self.displayName)
+
         # set the properties
         properties = gffItem.properties
         self.negMultiplier = 0
@@ -155,6 +157,10 @@ class ItemWrapper:
             propn = prop.gff["PropertyName"]
             sub = prop.gff["Subtype"]
             cost = prop.gff["CostValue"]
+
+            #quickfix for the +x part of soak items
+            if(propn == 22):
+                sub = sub + 1
 
             propNameString = str(baseLib.getPropertyName2DAValue(propn))
             propSubTypetring = str(baseLib.getSubType2DAResRef(propn, sub)) 
