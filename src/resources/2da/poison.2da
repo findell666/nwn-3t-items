@@ -1,7 +1,6 @@
 2DA V2.0                                                                                                                                                                                                       
                                                                                                                                                                                                                
            Label                         Name   Save_DC   Handle_DC   Dice_1   Dam_1   Default_1   Script_1         Dice_2   Dam_2   Default_2   Script_2          Cost   OnHitApplied   VFX_Impact            
-                                                                                                                                                                                                               
 0          Nightshade                    4646   10        8           1        1       DEX         ****             2        1       CON         ****              0.68   0              VFX_IMP_POISON_S      
 1          Small_Centipede_Poison        4647   11        9           2        1       DEX         ****             2        1       DEX         ****              0.8    0              VFX_IMP_POISON_S      
 2          Blade_Bane                    4648   15        0           2        1       STR         ****             4        1       CON         ****              1.4    1              VFX_IMP_POISON_S      
