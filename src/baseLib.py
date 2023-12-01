@@ -220,7 +220,7 @@ def getSubType2DAFile(prop):
     
 def getCostValue2DAFile(prop, sub):
     #weapon dmg
-    if prop == 16: # and (sub in (12, 11, 9):
+    if prop in (16, 74): # and (sub in (12, 11, 9): 74 == crits
         return (DAMAGE_COST, False)
     #uses
     if prop == 15:

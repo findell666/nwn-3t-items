@@ -14,7 +14,7 @@ condensedDict = {"Strength" : "STR", "Dexterity" : "DEX", "Constitution" : "CON"
 "Reflex" : "reflex", "Fortitude" : "fort", "Universal" : "univ", "Mind Affecting" : "mind", "Spellcraft"  : "sc", "Animal Empathy" : "ae", "Move Silently": "ms", "Spot" : "spot", "Craft Weapon" : "cw", "Use Magic Device" : "umd",
 "Discipline" : "disc", "Concentration": "conc",
 "Spell Resistance:" : "SR",
-"Regeneration:" : "regen", "Immunity:" : "immu", 
+"Regeneration:" : "regen", "Immunity:" : "Immunity", 
 "Armor Bonus:" : "AC", "Enhancement Bonus:" : "EB",
 "Electrical Resist" : "elect res", "Acid Resist" : "acid res",
 "Positive Energy" : "pos",
@@ -118,7 +118,7 @@ class ItemWrapper:
         self.castSpellCosts = []
 
         # render position
-        if gffItem.parentContainer == "equipment":
+        if gffItem.parentContainer == "equipment" and 131072 != gffItem.pos:
             self.position = self.equip_slots[gffItem.pos]
 
         if gffItem.parentContainer == "inventory":
@@ -165,6 +165,9 @@ class ItemWrapper:
             propNameString = str(baseLib.getPropertyName2DAValue(propn))
             propSubTypetring = str(baseLib.getSubType2DAResRef(propn, sub)) 
             propValue = str(baseLib.getCostValue2DAResRef(propn, sub, cost))
+
+            if propValue == "65535":
+                propValue = ""
 
             expanded = False
             # fix EB and Abilities mixed up together under same propn

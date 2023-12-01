@@ -17,7 +17,7 @@ def exportAsCSV(items, filePath, params):
     filter_owner = params["filter_owner"]
 
     # the csv separator
-    joinStr  = "; "
+    joinStr  = ";"
 
     f = open(filePath, 'w')
 
