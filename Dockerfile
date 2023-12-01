@@ -1,7 +1,8 @@
-FROM python:3.7
+FROM python:3.8
 
+RUN pip install --upgrade pip
 RUN pip install Flask gunicorn numpy
-
+RUN pip install importlib_metadata
 
 COPY src/ app/
 

@@ -357,7 +357,7 @@ def getBagItems(item):
     return result
 
 def getPC(bicFile):
-    pc = PlayerCharacter(bicFile, DirectoryContainer("./tmp/"))
+    pc = PlayerCharacter(bicFile, DirectoryContainer("/tmp/"))
     return pc
 
 def getGFFItemsFromPC(pc, params):
@@ -407,7 +407,7 @@ def getGFFItemsFromPC(pc, params):
 
 def rawGetItems(bicFile):
     items_str = ""
-    pc = PlayerCharacter(bicFile, DirectoryContainer("./tmp/"))
+    pc = PlayerCharacter(bicFile, DirectoryContainer("/tmp/"))
 
     equips = pc.equips
     items = pc.items 
