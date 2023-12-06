@@ -8,6 +8,8 @@ COPY src/ app/
 
 WORKDIR /app
 
+RUN mkdir ./tmp
+
 RUN python setup.py install
 
 ENV PORT 8080

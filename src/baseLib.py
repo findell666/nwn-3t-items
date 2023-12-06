@@ -12,6 +12,8 @@ from pynwn.resource import DirectoryContainer
 from pynwn.file.gff import GffInstance
 from pynwn.file.tlk import Tlk
 
+TMP_DIR_LOCATION = "./tmp/"
+
 #my items, all items onglets?
 #item sheet, last seen by (autorisation)
 #whishlist
@@ -357,7 +359,7 @@ def getBagItems(item):
     return result
 
 def getPC(bicFile):
-    pc = PlayerCharacter(bicFile, DirectoryContainer("/tmp/"))
+    pc = PlayerCharacter(bicFile, DirectoryContainer(TMP_DIR_LOCATION))
     return pc
 
 def getGFFItemsFromPC(pc, params):
@@ -407,7 +409,7 @@ def getGFFItemsFromPC(pc, params):
 
 def rawGetItems(bicFile):
     items_str = ""
-    pc = PlayerCharacter(bicFile, DirectoryContainer("/tmp/"))
+    pc = PlayerCharacter(bicFile, DirectoryContainer(TMP_DIR_LOCATION))
 
     equips = pc.equips
     items = pc.items 

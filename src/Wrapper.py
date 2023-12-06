@@ -49,7 +49,7 @@ def toCondensedString(string):
 
 def getInventoryItemPositionString(x, y):
     nthTab = int(y / 6) + 1
-    row = (y % 6)
+    row = (y % 6) + 1
     col = x + 1
     return "tab " + str(nthTab) + " row " + str(row) + " col " + str(col)
 
@@ -123,14 +123,14 @@ class ItemWrapper:
 
         if gffItem.parentContainer == "inventory":
             x = gffItem.pos[0].val
-            y = gffItem.pos[1].val + 1            
+            y = gffItem.pos[1].val          
             self.position = getInventoryItemPositionString(x, y)
 
         if gffItem.parentContainer == "bag":
             x = gffItem.pos[0].val
-            y = gffItem.pos[1].val + 1
+            y = gffItem.pos[1].val
             xBag = gffItem.parentPos[0].val
-            yBag = gffItem.parentPos[1].val + 1
+            yBag = gffItem.parentPos[1].val
             row = y
             col = x + 1
             self.position = "bag " + getInventoryItemPositionString(xBag, yBag) + ", row " + str(row) + " col " + str(col)            
@@ -143,8 +143,6 @@ class ItemWrapper:
             ItemWrapper.tagsSeen[self.unicityString] = ItemWrapper.tagsSeen[self.unicityString] + 1
         else:
             ItemWrapper.tagsSeen[self.unicityString] = 1
-
-        print(self.name +  "" + self.displayName)
 
         # set the properties
         properties = gffItem.properties
@@ -201,21 +199,21 @@ class ItemWrapper:
             
             # If an Item Property has a PropertyName of 15 (Cast Spell), then omit it from the Multiplier/NegMultiplier totals. 
             # It will be handled when calculating the SpellCosts instead.
-            PropertyCost = 0 #ItemPropertyWrapper.getPropertyCost(prop)
-            SubtypeCost = 0 #ItemPropertyWrapper.getSubtypeCost(prop, PropertyCost)
-            CostValue = 0 #ItemPropertyWrapper.getCostValue(prop)
+            #PropertyCost = ItemPropertyWrapper.getPropertyCost(prop)
+            #SubtypeCost = ItemPropertyWrapper.getSubtypeCost(prop, PropertyCost)
+            #CostValue = ItemPropertyWrapper.getCostValue(prop)
             #print("PropertyCost " + str(PropertyCost))
             #print("SubtypeCost " + str(SubtypeCost))
             #print("CostValue " + str(CostValue))
-            if(propn != 15):                
-                ItemPropertyCost = PropertyCost + SubtypeCost + CostValue
-                if(ItemPropertyCost < 0):
-                    self.negMultiplier += ItemPropertyCost
-                else:
-                    self.multiplier += ItemPropertyCost
+            #if(propn != 15):                
+            #    ItemPropertyCost = PropertyCost + SubtypeCost + CostValue
+            #    if(ItemPropertyCost < 0):
+            #        self.negMultiplier += ItemPropertyCost
+            #    else:
+            #        self.multiplier += ItemPropertyCost
 
-            if(propn == 15):
-                self.castSpellCosts.append((PropertyCost + CostValue)* SubtypeCost)
+            #if(propn == 15):
+            #    self.castSpellCosts.append((PropertyCost + CostValue)* SubtypeCost)
 
             self.addPropertyRaw(propn, prop.type, sub, cost, propNameString, propSubTypetring, propValue, prop, expanded)
             
