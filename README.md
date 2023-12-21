@@ -1,5 +1,5 @@
 # nwn-3t-items
-A python code to display items from a NWN BIC file, in a human friendly form
+A python code to export items from a NWN BIC file, to a CSV file
 
 Uses python lib from https://github.com/jd28/pynwn (master-obsolete branch)
 
